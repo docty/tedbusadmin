@@ -10,8 +10,12 @@ use App\Http\Requests\StoreStaff;
 class StaffController extends Controller
 {
 
-     $baseUrl = 'https://tedbus.herokuapp.com';
-     $localUrl = 'http://127.0.0.1:8100';
+    public function constructor()
+    {
+          $this->baseUrl = "https://tedbus.herokuapp.com";
+     $this->localUrl = 'http://127.0.0.1:8100';
+    }
+  
     /*
       Display a listing of all Users
     */
@@ -26,7 +30,8 @@ class StaffController extends Controller
        //  return  view('Dashboard.users.index', ['users' => $model]);
     }
 
-    /*
+    /* 
+     
      *  Register a new staff
      */
 
@@ -113,5 +118,6 @@ class StaffController extends Controller
     //     $response = $http->delete('http://127.0.0.1:8100/api/users?id='.$staff)->send();
 
     //    return redirect()->route('users.index');
-    // }
+     
+     }
 }
