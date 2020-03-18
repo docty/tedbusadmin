@@ -18,12 +18,12 @@ class StaffController extends Controller
     public function index()
     {
         return 123;
-        $http = new  \GuzzleHttp\Client();
-        $response = $http->get($baseUrl.'/api/users');
-        $result = $response->getBody()->getContents();
-        $model = json_decode($result, true);
-       return $model;
-        return  view('Dashboard.users.index', ['users' => $model]);
+       //  $http = new  \GuzzleHttp\Client();
+       //  $response = $http->get($baseUrl.'/api/users');
+       //  $result = $response->getBody()->getContents();
+       //  $model = json_decode($result, true);
+       // return $model;
+       //  return  view('Dashboard.users.index', ['users' => $model]);
     }
 
     /*
