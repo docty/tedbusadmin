@@ -21,7 +21,9 @@ class StaffController extends Controller
     */
     public function index()
     {
-        return $this->baseUrl;
+        $localUrl = 'http://127.0.0.1:8100';
+        $baseUrl = "https://tedbus.herokuapp.com";
+        return $baseUrl;
        //  $http = new  \GuzzleHttp\Client();
        //  $response = $http->get($baseUrl.'/api/users');
        //  $result = $response->getBody()->getContents();
