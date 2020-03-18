@@ -17,7 +17,7 @@ class StaffController extends Controller
     */
     public function index()
     {
-        return 123;
+        return '123';
        //  $http = new  \GuzzleHttp\Client();
        //  $response = $http->get($baseUrl.'/api/users');
        //  $result = $response->getBody()->getContents();
@@ -33,7 +33,7 @@ class StaffController extends Controller
     public function create()
     {
          
-        return view('Dashboard.staff.create');
+        //return view('Dashboard.staff.create');
     }
 
     /*
@@ -42,18 +42,18 @@ class StaffController extends Controller
 
     public function store(StoreStaff $request)
     {
-        $validated = $request->validated();
+        // $validated = $request->validated();
 
-        $staff = new Staff();
-        $staff->urlId = StaffDemit::staffUrl($request);
-        $staff->surname = $request->lastname;
-        $staff->otherName = $request->firstname;
-        $staff->phoneNumber = $request->contact;
-        $staff->gender = $request->gender;
-        $staff->staffId = random_int(1000000,9999999);
-        $staff->save();
+        // $staff = new Staff();
+        // $staff->urlId = StaffDemit::staffUrl($request);
+        // $staff->surname = $request->lastname;
+        // $staff->otherName = $request->firstname;
+        // $staff->phoneNumber = $request->contact;
+        // $staff->gender = $request->gender;
+        // $staff->staffId = random_int(1000000,9999999);
+        // $staff->save();
 
-        return redirect()->route('staff.index');
+        // return redirect()->route('staff.index');
     }
 
     /*
@@ -61,12 +61,12 @@ class StaffController extends Controller
      */
     public function show($userId)
     {    
-        $http = new  \GuzzleHttp\Client();
-        $response = $http->get('http://127.0.0.1:8100/api/users/'.$userId);
-        $result = $response->getBody()->getContents();
-        $model = json_decode($result, true);
+        // $http = new  \GuzzleHttp\Client();
+        // $response = $http->get('http://127.0.0.1:8100/api/users/'.$userId);
+        // $result = $response->getBody()->getContents();
+        // $model = json_decode($result, true);
         
-        return view('Dashboard.users.profile', ['staff' => $model]);
+        // return view('Dashboard.users.profile', ['staff' => $model]);
        
         
     }
@@ -77,13 +77,13 @@ class StaffController extends Controller
 
     public function edit($staffId)
     {
-        $staff = Staff::where('urlId', $staffId)->first();
-        if ($staff) {
-             return view('Dashboard.staff.edit' , ['staff' => $staff]);
+        // $staff = Staff::where('urlId', $staffId)->first();
+        // if ($staff) {
+        //      return view('Dashboard.users.edit' , ['staff' => $staff]);
          
-        }else{
-            return "Present the 404 page";
-        }
+        // }else{
+        //     return "Present the 404 page";
+        // }
     }
 
     /*
@@ -92,14 +92,14 @@ class StaffController extends Controller
     
     public function update(Request $request, Staff $staff)
     {
-         $staff->surname = $request->lastname;
-        $staff->otherName = $request->firstname;
-        $staff->phoneNumber = $request->contact;
-        $staff->staffId = $request->staffId;
-        $staff->gender = $request->gender;
-        $staff->save();
+        //  $staff->surname = $request->lastname;
+        // $staff->otherName = $request->firstname;
+        // $staff->phoneNumber = $request->contact;
+        // $staff->staffId = $request->staffId;
+        // $staff->gender = $request->gender;
+        // $staff->save();
 
-        return redirect()->route('staff.show', $staff->urlId);
+        // return redirect()->route('staff.show', $staff->urlId);
     }
 
     /**
@@ -108,10 +108,10 @@ class StaffController extends Controller
      */
     public function destroy($staff)
     {
-        $http = new  \GuzzleHttp\Client();
+    //     $http = new  \GuzzleHttp\Client();
 
-        $response = $http->delete('http://127.0.0.1:8100/api/users?id='.$staff)->send();
+    //     $response = $http->delete('http://127.0.0.1:8100/api/users?id='.$staff)->send();
 
-       return redirect()->route('users.index');
-    }
+    //    return redirect()->route('users.index');
+    // }
 }
