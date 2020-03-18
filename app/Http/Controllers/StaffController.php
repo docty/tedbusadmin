@@ -28,8 +28,8 @@ class StaffController extends Controller
         $response = $http->get($baseUrl.'/api/users');
         $result = $response->getBody()->getContents();
         $model = json_decode($result, true);
-       return $model;
-       //  return  view('Dashboard.users.index', ['users' => $model]);
+       
+         return  view('Dashboard.users.index', ['users' => $model]);
     }
 
     /* 
