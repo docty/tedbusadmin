@@ -12,8 +12,8 @@ class StaffController extends Controller
 
     public function constructor()
     {
-          $this->baseUrl = "https://tedbus.herokuapp.com";
-     $this->localUrl = 'http://127.0.0.1:8100';
+          $baseUrl = "https://tedbus.herokuapp.com";
+     $localUrl = 'http://127.0.0.1:8100';
     }
   
     /*
