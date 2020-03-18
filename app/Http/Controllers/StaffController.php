@@ -11,12 +11,13 @@ class StaffController extends Controller
 {
 
      $baseUrl = 'https://tedbus.herokuapp.com';
-     $localUrl = 'http://127.0.0.1:8100'
+     $localUrl = 'http://127.0.0.1:8100';
     /*
       Display a listing of all Users
     */
     public function index()
     {
+        return 123;
         $http = new  \GuzzleHttp\Client();
         $response = $http->get($baseUrl.'/api/users');
         $result = $response->getBody()->getContents();
