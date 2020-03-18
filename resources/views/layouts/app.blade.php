@@ -8,8 +8,8 @@
          <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="stylesheet" href="jquerycustom.css" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="css2/all.css">
+        <link rel="stylesheet" href="{{asset('jquerycustom.css')}}" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="{{asset('css2/all.css')}}">
 
     </head>
     <body>
@@ -19,7 +19,7 @@
 
         <script src="{{ asset('js/bootstrap.min.js') }}" ></script>
         <script src="{{ asset('js/jquery-3.2.1.min.js') }}" ></script>
-        <script src="jquery.customjquery.js" charset="utf-8"></script>
-        <script src="jquerymain.js" charset="utf-8"></script>
+        <script src="{{ asset('jquery.customjquery.js')}}" charset="utf-8"></script>
+        <script src="{{ asset('jquerymain.js')}}" charset="utf-8"></script>
     </body>
 </html>
