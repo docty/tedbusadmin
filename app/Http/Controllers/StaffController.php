@@ -23,12 +23,12 @@ class StaffController extends Controller
     {
         $localUrl = 'http://127.0.0.1:8100';
         $baseUrl = "https://tedbus.herokuapp.com";
-        return $baseUrl;
-       //  $http = new  \GuzzleHttp\Client();
-       //  $response = $http->get($baseUrl.'/api/users');
-       //  $result = $response->getBody()->getContents();
-       //  $model = json_decode($result, true);
-       // return $model;
+         
+        $http = new  \GuzzleHttp\Client();
+        $response = $http->get($baseUrl.'/api/users');
+        $result = $response->getBody()->getContents();
+        $model = json_decode($result, true);
+       return $model;
        //  return  view('Dashboard.users.index', ['users' => $model]);
     }
 
