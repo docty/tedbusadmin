@@ -21,7 +21,7 @@ class StaffController extends Controller
     */
     public function index()
     {
-        return '123';
+        return $this->baseUrl;
        //  $http = new  \GuzzleHttp\Client();
        //  $response = $http->get($baseUrl.'/api/users');
        //  $result = $response->getBody()->getContents();
