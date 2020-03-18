@@ -68,12 +68,15 @@ class StaffController extends Controller
      */
     public function show($userId)
     {    
-        // $http = new  \GuzzleHttp\Client();
-        // $response = $http->get('http://127.0.0.1:8100/api/users/'.$userId);
-        // $result = $response->getBody()->getContents();
-        // $model = json_decode($result, true);
+        $localUrl = 'http://127.0.0.1:8100';
+        $baseUrl = "https://tedbus.herokuapp.com";
+
+        $http = new  \GuzzleHttp\Client();
+        $response = $http->get($baseUrl.'/api/users/'.$userId);
+        $result = $response->getBody()->getContents();
+        $model = json_decode($result, true);
         
-        // return view('Dashboard.users.profile', ['staff' => $model]);
+        return view('Dashboard.users.profile', ['staff' => $model]);
        
         
     }
