@@ -9,13 +9,16 @@ use App\Http\Requests\StoreStaff;
 
 class StaffController extends Controller
 {
+
+     $baseUrl = 'https://tedbus.herokuapp.com';
+     $localUrl = 'http://127.0.0.1:8100'
     /*
       Display a listing of all Users
     */
     public function index()
     {
         $http = new  \GuzzleHttp\Client();
-        $response = $http->get('http://127.0.0.1:8100/api/users');
+        $response = $http->get($baseUrl.'/api/users');
         $result = $response->getBody()->getContents();
         $model = json_decode($result, true);
        
