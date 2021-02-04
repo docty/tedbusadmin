@@ -12,8 +12,8 @@ class StaffController extends Controller
 
     public function constructor()
     {
-          $baseUrl = "https://tedbus.herokuapp.com";
-     $localUrl = 'http://127.0.0.1:8100';
+        //$baseUrl = "https://tedbus.herokuapp.com";
+        $localUrl = 'http://127.0.0.1:8100';
     }
   
     /*
@@ -21,8 +21,8 @@ class StaffController extends Controller
     */
     public function index()
     {
-        $localUrl = 'http://127.0.0.1:8100';
-        $baseUrl = "https://tedbus.herokuapp.com";
+        $baseUrl = 'http://127.0.0.1:8100';
+        //$baseUrl = "https://tedbus.herokuapp.com";
          
         $http = new  \GuzzleHttp\Client();
         $response = $http->get($baseUrl.'/api/users');
@@ -68,8 +68,8 @@ class StaffController extends Controller
      */
     public function show($userId)
     {    
-        $localUrl = 'http://127.0.0.1:8100';
-        $baseUrl = "https://tedbus.herokuapp.com";
+        $baseUrl = 'http://127.0.0.1:8100';
+        //$baseUrl = "https://tedbus.herokuapp.com";
 
         $http = new  \GuzzleHttp\Client();
         $response = $http->get($baseUrl.'/api/users/'.$userId);
