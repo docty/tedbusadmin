@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Extras\StaffDemit;
-use App\Staff;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreStaff;
 
@@ -21,14 +21,9 @@ class StaffController extends Controller
     */
     public function index()
     {
-        $baseUrl = 'http://127.0.0.1:8100';
-        //$baseUrl = "https://tedbus.herokuapp.com";
+        
+        $model = User::all();
          
-        $http = new  \GuzzleHttp\Client();
-        $response = $http->get($baseUrl.'/api/users');
-        $result = $response->getBody()->getContents();
-        $model = json_decode($result, true);
-       
          return  view('Dashboard.users.index', ['users' => $model]);
     }
 
@@ -40,7 +35,7 @@ class StaffController extends Controller
     public function create()
     {
          
-        //return view('Dashboard.staff.create');
+        return view('Dashboard.users.create');
     }
 
     /*
