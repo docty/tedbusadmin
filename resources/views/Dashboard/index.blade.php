@@ -1,7 +1,20 @@
-@extends('layouts.app')
+@extends('Dashboard.container')
 
 @section('content')
-   
+   <div class="content-wrapper">
+      <section class="content-header">
+         <div class="header-icon">
+            <i class="fa fa-users"></i>
+         </div>
+         <div class="header-title">
+            <h1>Dashboard</h1>
+            <small>Home</small>
+         </div>
+      </section>
+      <section class="content">
+         <h1>Under Maintenance </h1>
+      </section>
+   </div>
       
       
       <!-- ChartJs JavaScript -->

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('Dashboard.container')
 
 @section('content')
 <!-- Content Wrapper. Contains page content -->

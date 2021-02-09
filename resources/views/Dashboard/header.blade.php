@@ -93,7 +93,7 @@
                           <!-- start message -->
                           <a href="#" class="border-gray">
                              <div class="pull-left">
-                                <img src="assets/dist/img/avatar.png" class="img-circle" alt="User Image">
+                                <img src="{{asset('assets/dist/img/avatar.png')}}" class="img-circle" alt="User Image">
                              </div>
                              <h4>Ronaldo</h4>
                              <p>Please oreder 10 pices of kits..</p>
@@ -263,7 +263,7 @@
            <!-- user -->
            <li class="dropdown dropdown-user">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="assets/dist/img/avatar5.png" class="img-circle" width="45" height="45" alt="user"></a>
+              <img src="{{asset('assets/dist/img/avatar5.png')}}" class="img-circle" width="45" height="45" alt="user"></a>
               <ul class="dropdown-menu" >
                  <li>
                     <a href="profile.html">

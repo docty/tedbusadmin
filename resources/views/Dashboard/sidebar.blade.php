@@ -18,80 +18,68 @@
            </a>
            <ul class="treeview-menu">
               <li><a href="/users/create">Add Staff</a></li>
-              <li><a href="/users">List</a></li>
+              <li><a href="/users">List Staff</a></li>
            </ul>
         </li>
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-shopping-basket"></i><span>Transaction</span>
+           <i class="fa fa-shopping-basket"></i><span>Bus</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="deposit.html">New Deposit</a></li>
-              <li><a href="expense.html">New Expense</a></li>
-              <li><a href="transfer.html">Transfer</a></li>
-              <li><a href="view-tsaction.html">View transaction</a></li>
-              <li><a href="balance.html">Balance Sheet</a></li>
-              <li><a href="treport.html">Transfer Report</a></li>
+              <li><a href="deposit.html">Add Bus</a></li>
+              <li><a href="expense.html">List Bus</a></li>
            </ul>
         </li>
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-shopping-cart"></i><span>Sales</span>
+           <i class="fa fa-shopping-cart"></i><span>Customer</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="invoice.html">Invoices</a></li>
-              <li><a href="ninvoices.html">New Invoices</a></li>
-              <li><a href="recurring.html">Recurring invoices</a></li>
-              <li><a href="nrecurring.html">New Recurring invoices</a></li>
-              <li><a href="quote.html">quotes</a></li>
-              <li><a href="nquote.html">New quote</a></li>
-              <li><a href="payment.html">Payments</a></li>
-              <li><a href="taxeport.html">Tax Rates</a></li>
+            <li><a href="invoice.html">Add Customer</a></li>
+              <li><a href="invoice.html">List Customer</a></li>
            </ul>
         </li>
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-book"></i><span>Task</span>
+           <i class="fa fa-book"></i><span>Booking</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="rtask.html">Running Task</a></li>
-              <li><a href="atask.html">Archive Task</a></li>
+              <li><a href="rtask.html">Add Booking</a></li>
+              <li><a href="atask.html">List Booking</a></li>
            </ul>
         </li>
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-shopping-bag"></i><span>Accounting</span>
+           <i class="fa fa-shopping-bag"></i><span>Payment</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="cpayment.html">Client payment</a></li>
-              <li><a href="emanage.html">Expense management</a></li>
-              <li><a href="ecategory.html">Expense Category</a></li>
+              <li><a href="cpayment.html">Add  Payment</a></li>
+              <li><a href="emanage.html">List Payment</a></li>
            </ul>
         </li>
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-file-text"></i><span>Report</span>
+           <i class="fa fa-file-text"></i><span>Partner</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="preport.html">Project Report</a></li>
-              <li><a href="creport.html">Client Report</a></li>
-              <li><a href="ereport.html">Expense Report</a></li>
-              <li><a href="incomexp.html">Income expense comparesion</a></li>
+              <li><a href="preport.html">Add Partner</a></li>
+              <li><a href="creport.html">List Partner</a></li>
+              
            </ul>
         </li>
         <li class="treeview">
