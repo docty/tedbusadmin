@@ -27,7 +27,7 @@
    <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
            <!-- Orders -->
-           <li class="dropdown messages-menu">
+           {{-- <li class="dropdown messages-menu">
               <a href="#" class="dropdown-toggle admin-notification" data-toggle="dropdown"> 
               <i class="pe-7s-cart"></i>
               <span class="label label-primary">5</span>
@@ -79,9 +79,9 @@
                     </ul>
                  </li>
               </ul>
-           </li>
+           </li> --}}
            <!-- Messages -->
-           <li class="dropdown messages-menu">
+           {{-- <li class="dropdown messages-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="pe-7s-mail"></i>
               <span class="label label-success">4</span>
@@ -149,9 +149,9 @@
                     </ul>
                  </li>
               </ul>
-           </li>
+           </li> --}}
            <!-- Notifications -->
-           <li class="dropdown notifications-menu">
+           {{-- <li class="dropdown notifications-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="pe-7s-bell"></i>
               <span class="label label-warning">7</span>
@@ -184,9 +184,9 @@
                     </ul>
                  </li>
               </ul>
-           </li>
+           </li> --}}
            <!-- Tasks -->
-           <li class="dropdown tasks-menu">
+           {{-- <li class="dropdown tasks-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="pe-7s-note2"></i>
               <span class="label label-danger">6</span>
@@ -243,9 +243,9 @@
                     </ul>
                  </li>
               </ul>
-           </li>
+           </li> --}}
            <!-- Help -->
-           <li class="dropdown dropdown-help hidden-xs">
+           {{-- <li class="dropdown dropdown-help hidden-xs">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="pe-7s-settings"></i></a>
               <ul class="dropdown-menu" >
@@ -259,16 +259,16 @@
                     <i class="fa fa-wifi"></i> wifi</a>
                  </li>
               </ul>
-           </li>
+           </li> --}}
            <!-- user -->
            <li class="dropdown dropdown-user">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="{{asset('assets/dist/img/avatar5.png')}}" class="img-circle" width="45" height="45" alt="user"></a>
               <ul class="dropdown-menu" >
-                 <li>
+                 {{-- <li>
                     <a href="profile.html">
                     <i class="fa fa-user"></i> User Profile</a>
-                 </li>
+                 </li> --}}
                  <li><a href="#"><i class="fa fa-inbox"></i> Inbox</a></li>
                  <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fa fa-sign-out"></i> Signout</a>

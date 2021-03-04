@@ -15,47 +15,32 @@ class StaffController extends Controller
         //$baseUrl = "https://tedbus.herokuapp.com";
         $localUrl = 'http://127.0.0.1:8100';
     }
-  
-    /*
-      Display a listing of all Users
-    */
+
     public function index()
     {
-        
         $model = User::all();
-         
-         return  view('Dashboard.users.index', ['users' => $model]);
+        return  view('Dashboard.users.index', ['users' => $model]);
     }
-
-    /* 
-     
-     *  Register a new staff
-     */
 
     public function create()
     {
-         
         return view('Dashboard.users.create');
     }
 
-    /*
-     * Store a newly created staff 
-     */
-
-    public function store(StoreStaff $request)
+    public function store(Request $request)
     {
-        // $validated = $request->validated();
-
-        // $staff = new Staff();
-        // $staff->urlId = StaffDemit::staffUrl($request);
-        // $staff->surname = $request->lastname;
-        // $staff->otherName = $request->firstname;
-        // $staff->phoneNumber = $request->contact;
-        // $staff->gender = $request->gender;
-        // $staff->staffId = random_int(1000000,9999999);
-        // $staff->save();
-
-        // return redirect()->route('staff.index');
+        $staff = new User();
+        $staff->urlId = StaffDemit::staffUrl($request);
+        $staff->firstName = $request->firstName;
+        $staff->lastName = $request->lastName;
+        $staff->mobile = $request->mobile;
+        $staff->email = $request->email;
+        $staff->password = random_int(1000000,9999999);
+        $staff->gender = $request->gender;
+        $staff->address = $request->address;
+        $staff->staffId = random_int(1000000,9999999);
+        $staff->save();
+        return redirect()->route('staff.index');
     }
 
     /*

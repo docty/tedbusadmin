@@ -17,12 +17,10 @@ class CreateCustomersTable extends Migration
             $table->bigIncrements('id');
             $table->string('urlId');
             $table->integer('customerId')->unique('Customer Identification');
-            $table->integer('staffId')->index('Officer Id');
-            $table->foreign('staffId')->references('staffId')->on('staff')->onDelete('cascade');
-            $table->string('surname');
-            $table->string('otherName');
-            $table->string('phoneNumber');
-            $table->string('gender');
+            $table->string('lastName');
+            $table->string('firstName');
+            $table->string('email')->nullable();
+            $table->string('mobile');
             $table->timestamps();
         });
     }

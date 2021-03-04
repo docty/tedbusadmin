@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         //factory(App\LoanBook::class, 1)->create();
         //factory(App\PaymentSchedule::class, 3)->create();
         $this->call(UsersTableSeeder::class);
+        $this->call(CustomerSeeder::class);
         
          
         

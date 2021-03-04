@@ -12,16 +12,16 @@ class CustomerController extends Controller
      */
     public function index()
     {
-         $baseUrl = 'http://127.0.0.1:8100';
+      //   $baseUrl = 'http://127.0.0.1:8100';
         //$baseUrl = "https://tedbus.herokuapp.com";
 
-       $http = new  \GuzzleHttp\Client();
+    //    $http = new  \GuzzleHttp\Client();
 
-        $response = $http->get($baseUrl.'/api/busbooking');
-        $result = $response->getBody()->getContents();
-        $model = json_decode($result, true);
-          
-       return  view('Dashboard.busbooking.index', ['customer' => $model]);
+    //     $response = $http->get($baseUrl.'/api/busbooking');
+    //     $result = $response->getBody()->getContents();
+    //     $model = json_decode($result, true);
+        $model = Customer::all();
+       return  view('Dashboard.customers.index', ['customers' => $model]);
     }
 
     /*
@@ -30,7 +30,7 @@ class CustomerController extends Controller
 
     public function create()
     {
-        return view('Dashboard.customer.create');
+        return view('Dashboard.customers.create');
     }
 
     /*
@@ -40,19 +40,32 @@ class CustomerController extends Controller
     {
         $microtime = microtime();
         $comps = explode(' ', $microtime);
-        $content = $request->contact.''.$request->surname.$comps[1];
-        
+        $content = $request->mobile.''.$request->lastName.$comps[1];
         $customer = new Customer();
         $customer->urlId = md5($content);
-        $customer->surname = $request->lastname;
-        $customer->staffId = $request->officerId;
-        $customer->otherName = $request->firstname;
-        $customer->phoneNumber = $request->contact;
-        $customer->gender = $request->gender;
+        $customer->lastName = $request->lastName;
+        $customer->firstName = $request->firstName;
+        $customer->mobile = $request->mobile;
+        $customer->email = $request->email;
         $customer->customerId = random_int(1000000,9999999);
         $customer->save();
+        return redirect()->route('customers.index');
+    }
 
-        return redirect()->route('customer.index');
+    public function save(Request $request)
+    {
+        $microtime = microtime();
+        $comps = explode(' ', $microtime);
+        $content = $request->mobile.''.$request->lastName.$comps[1];
+        $customer = new Customer();
+        $customer->urlId = md5($content);
+        $customer->lastName = $request->lastName;
+        $customer->firstName = $request->firstName;
+        $customer->mobile = $request->mobile;
+        $customer->email = $request->email;
+        $customer->customerId = random_int(1000000,9999999);
+        $customer->save();
+        return response()->json('Saved Successfully');
     }
 
     /*

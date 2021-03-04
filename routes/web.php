@@ -21,7 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/users', 'StaffController');
-Route::resource('/busbooking', 'CustomerController');
+Route::resource('/customers', 'CustomerController');
 Route::post('/payment', 'MinisheetController@payment')->name('payment');
 Route::get('/payment', 'MinisheetController@paymentindex')->name('payment_index');
  

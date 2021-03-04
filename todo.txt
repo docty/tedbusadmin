@@ -1,0 +1,14 @@
+##################### GENERAL  ##########################
+Change logo
+Use appropriate icon at the sidebar
+Change default profile icon
+
+##################### STAFF  ##########################
+Export data should work
+Delete of staff should be interactive
+Add search field
+
+##################### CUSTOMER  ##########################
+Export data should work
+Delete of staff should be interactive
+Add search field

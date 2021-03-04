@@ -21,7 +21,7 @@ class StaffDemit
 	{
 		$microtime = microtime();
         $comps = explode(' ', $microtime);
-        $content = $request->contact.''.$request->surname.$comps[1];
+        $content = $request->mobile.''.$request->lastName.$comps[1];
         return md5($content);
 	}
 }

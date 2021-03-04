@@ -23,27 +23,27 @@
         </li>
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-shopping-basket"></i><span>Bus</span>
-           <span class="pull-right-container">
-           <i class="fa fa-angle-left pull-right"></i>
-           </span>
-           </a>
-           <ul class="treeview-menu">
-              <li><a href="deposit.html">Add Bus</a></li>
-              <li><a href="expense.html">List Bus</a></li>
-           </ul>
-        </li>
-        <li class="treeview">
-           <a href="#">
            <i class="fa fa-shopping-cart"></i><span>Customer</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-            <li><a href="invoice.html">Add Customer</a></li>
-              <li><a href="invoice.html">List Customer</a></li>
+            <li><a href="/customers/create">Add Customer</a></li>
+              <li><a href="/customers">List Customer</a></li>
            </ul>
+        </li>
+        {{-- <li class="treeview">
+         <a href="#">
+         <i class="fa fa-shopping-basket"></i><span>Bus</span>
+         <span class="pull-right-container">
+         <i class="fa fa-angle-left pull-right"></i>
+         </span>
+         </a>
+         <ul class="treeview-menu">
+            <li><a href="#">Add Bus</a></li>
+            <li><a href="#">List Bus</a></li>
+         </ul>
         </li>
         <li class="treeview">
            <a href="#">
@@ -53,8 +53,8 @@
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="rtask.html">Add Booking</a></li>
-              <li><a href="atask.html">List Booking</a></li>
+              <li><a href="#">Add Booking</a></li>
+              <li><a href="#">List Booking</a></li>
            </ul>
         </li>
         <li class="treeview">
@@ -65,8 +65,8 @@
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="cpayment.html">Add  Payment</a></li>
-              <li><a href="emanage.html">List Payment</a></li>
+              <li><a href="#">Add  Payment</a></li>
+              <li><a href="#">List Payment</a></li>
            </ul>
         </li>
         <li class="treeview">
@@ -77,12 +77,12 @@
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="preport.html">Add Partner</a></li>
-              <li><a href="creport.html">List Partner</a></li>
+              <li><a href="#">Add Partner</a></li>
+              <li><a href="#">List Partner</a></li>
               
            </ul>
-        </li>
-        <li class="treeview">
+        </li> --}}
+        {{-- <li class="treeview">
            <a href="#">
            <i class="fa fa-bell"></i><span>Attendance</span>
            <span class="pull-right-container">
@@ -329,7 +329,7 @@
            <span class="pull-right-container">
            </span>
            </a>
-        </li>
+        </li> --}}
      </ul>
   </div>
   <!-- /.sidebar -->

@@ -7,8 +7,8 @@
             <i class="fa fa-users"></i>
          </div>
          <div class="header-title">
-            <h1>Staff</h1>
-            <small>Staff List</small>
+            <h1>Customer</h1>
+            <small>Customer List</small>
          </div>
       </section>
       <section class="content">
@@ -18,7 +18,7 @@
                         <div class="panel-heading">
                            <div class="btn-group" id="buttonexport">
                               <a href="javascript:void(0)">
-                                 <h4>Add staff</h4>
+                                 <h4>Add customer</h4>
                               </a>
                            </div>
                         </div>
@@ -26,7 +26,7 @@
                         
                            <div class="btn-group">
                               <div class="buttonexport" id="buttonlist"> 
-                                 <a class="btn btn-add" href="/users/create"> <i class="fa fa-plus"></i> Add Staff
+                                 <a class="btn btn-add" href="/customers/create"> <i class="fa fa-plus"></i> Add Customer
                                  </a>  
                               </div>
                               <button class="btn btn-exp btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
@@ -45,7 +45,7 @@
                                  </li>
                               </ul>
                            </div>
-                           @include('Dashboard.users.users_table')
+                           @include('Dashboard.customers.customers_table')
                            
                         </div>
                      </div>
@@ -59,7 +59,7 @@
                      <div class="modal-content">
                         <div class="modal-header modal-header-primary">
                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                           <h3><i class="fa fa-user m-r-5"></i> Delete Staff</h3>
+                           <h3><i class="fa fa-user m-r-5"></i> Delete Customer</h3>
                         </div>
                         <div class="modal-body">
                            <div class="row">
@@ -67,7 +67,7 @@
                                  <form class="form-horizontal">
                                     <fieldset>
                                        <div class="col-md-12 form-group user-form-group">
-                                          <label class="control-label">Are you sure to delete staff</label>
+                                          <label class="control-label">Are you sure to delete customer</label>
                                           <div class="pull-right">
                                              <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">NO</button>
                                              <button type="submit" class="btn btn-add btn-sm">YES</button>
