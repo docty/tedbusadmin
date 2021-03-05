@@ -1,6 +1,4 @@
 //BUS
 name, features, price per location, estimated time
-//CUSTOMER
-fullname, number, email, city
 //BOOKING
 date, from, to, bus

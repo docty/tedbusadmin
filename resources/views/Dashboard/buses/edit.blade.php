@@ -15,14 +15,14 @@
               </a>
           </li>
           <li>
-            <a  href="/staff">
+            <a class="active" href="/staff">
               <i class="fa fa-user"></i>
               <span>Staff </span>
               {{-- <span class="label label-theme pull-right mail-info">2</span> --}}
               </a>
           </li>
           <li>
-            <a class="active" href="/customer">
+            <a href="/customer">
               <i class="fa fa-users"></i>
               <span>Customer </span>
               </a>
@@ -73,43 +73,43 @@
       <section class="wrapper">
         <div class="row">
             <div class="showback">
-                <h3>Register New Customer</h3>
+                <h3>Update Staff</h3>
             </div>
             <!-- Create a table for all -->
             <div class="row mt" >
-              <div class="col-lg-8 col-lg-offset-2  center">
+              <div class="col-lg-8">
                 <div class="form-panel">
                   <div class="form">
-                <form class="cmxform form-horizontal style-form" id="signupForm" method="post" action="{{route('customer.store')}}">
+                <form class="cmxform form-horizontal style-form" id="signupForm" method="post" action="{{route('staff.update', $staff)}}">
                   @csrf
+                  @method('put')
                   <div class="form-group ">
                     <label for="firstname" class="control-label col-lg-2">Firstname</label>
                     <div class="col-lg-10">
-                      <input class=" form-control" id="firstname" name="firstname" type="text" required placeholder="Smith" />
+                      <input class=" form-control" id="firstname" name="firstname" type="text" value="{{$staff->otherName}}" />
                     </div>
                   </div>
                   <div class="form-group ">
                     <label for="lastname" class="control-label col-lg-2">Lastname</label>
                     <div class="col-lg-10">
-                      <input class=" form-control" id="lastname" name="lastname" type="text" required placeholder="Zoe" />
+                      <input class=" form-control" id="lastname" name="lastname" type="text" value="{{$staff->surname}}"/>
                     </div>
                   </div>
                   <div class="form-group ">
-                    <label for="contact" class="control-label col-lg-2">Contact</label>
+                    <label for="username" class="control-label col-lg-2">Contact</label>
                     <div class="col-lg-10">
-                      <input class="form-control " id="contacts" name="contact" type="text" required placeholder="233-242-727-687" maxlength="15"/>
+                      <input class="form-control " id="contact" name="contact" type="text" value="{{$staff->phoneNumber}}"/>
                     </div>
                   </div>
-                   
                   <div class="form-group ">
-                    <label for="officerId" class="control-label col-lg-2">Officer Id</label>
+                    <label for="password" class="control-label col-lg-2">Staff Id</label>
                     <div class="col-lg-10">
-                      <input class="form-control " id="officerId" name="officerId" type="text" required maxlength="7" minlength="7" />
+                      <input class="form-control " id="staffId" name="staffId" type="text" value="{{$staff->staffId}}" />
                     </div>
                   </div>
                    
                    
-                     <div class="radio">
+                <div class="radio">
                 <label>
                   <input type="radio" name="gender" id="male" value="Male" >
                   Male
@@ -125,7 +125,7 @@
                    
                   <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">
-                      <button class="btn btn-theme" type="submit">Register</button>
+                      <button class="btn btn-theme" type="submit">Update</button>
                        
                     </div>
                   </div>

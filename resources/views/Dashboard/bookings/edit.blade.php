@@ -6,7 +6,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="/"><img src="../../img/apple-touch-icon.png" class="img-circle" width="80"></a></p>
+          <p class="centered"><a href="profile.html"><img src="../img/apple-touch-icon.png" class="img-circle" width="80"></a></p>
           <h5 class="centered">Mos Loans</h5>
           <li class="mt">
             <a  href="/home">
@@ -15,14 +15,14 @@
               </a>
           </li>
           <li>
-            <a  href="/staff">
+            <a class="active" href="/staff">
               <i class="fa fa-user"></i>
               <span>Staff </span>
               {{-- <span class="label label-theme pull-right mail-info">2</span> --}}
               </a>
           </li>
           <li>
-            <a class="active" href="/customer">
+            <a href="/customer">
               <i class="fa fa-users"></i>
               <span>Customer </span>
               </a>
@@ -73,38 +73,38 @@
       <section class="wrapper">
         <div class="row">
             <div class="showback">
-                <h3>Update Customer</h3>
+                <h3>Update Staff</h3>
             </div>
             <!-- Create a table for all -->
             <div class="row mt" >
               <div class="col-lg-8">
                 <div class="form-panel">
                   <div class="form">
-                <form class="cmxform form-horizontal style-form" id="signupForm" method="post" action="{{route('customer.update', $customer)}}">
+                <form class="cmxform form-horizontal style-form" id="signupForm" method="post" action="{{route('staff.update', $staff)}}">
                   @csrf
                   @method('put')
                   <div class="form-group ">
                     <label for="firstname" class="control-label col-lg-2">Firstname</label>
                     <div class="col-lg-10">
-                      <input class=" form-control" id="firstname" name="firstname" type="text" value="{{$customer->otherName}}" />
+                      <input class=" form-control" id="firstname" name="firstname" type="text" value="{{$staff->otherName}}" />
                     </div>
                   </div>
                   <div class="form-group ">
                     <label for="lastname" class="control-label col-lg-2">Lastname</label>
                     <div class="col-lg-10">
-                      <input class=" form-control" id="lastname" name="lastname" type="text" value="{{$customer->surname}}"/>
+                      <input class=" form-control" id="lastname" name="lastname" type="text" value="{{$staff->surname}}"/>
                     </div>
                   </div>
                   <div class="form-group ">
                     <label for="username" class="control-label col-lg-2">Contact</label>
                     <div class="col-lg-10">
-                      <input class="form-control " id="contact" name="contact" type="text" value="{{$customer->phoneNumber}}"/>
+                      <input class="form-control " id="contact" name="contact" type="text" value="{{$staff->phoneNumber}}"/>
                     </div>
                   </div>
                   <div class="form-group ">
-                    <label for="password" class="control-label col-lg-2">Customer Id</label>
+                    <label for="password" class="control-label col-lg-2">Staff Id</label>
                     <div class="col-lg-10">
-                      <input class="form-control " id="customerId" name="customerId" type="text" value="{{$customer->customerId}}" />
+                      <input class="form-control " id="staffId" name="staffId" type="text" value="{{$staff->staffId}}" />
                     </div>
                   </div>
                    

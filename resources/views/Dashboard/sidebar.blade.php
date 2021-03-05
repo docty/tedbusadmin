@@ -33,55 +33,58 @@
               <li><a href="/customers">List Customer</a></li>
            </ul>
         </li>
-        {{-- <li class="treeview">
+        <li class="treeview">
          <a href="#">
-         <i class="fa fa-shopping-basket"></i><span>Bus</span>
+         <i class="fa fa-shopping-basket"></i><span>Partner</span>
          <span class="pull-right-container">
          <i class="fa fa-angle-left pull-right"></i>
          </span>
          </a>
          <ul class="treeview-menu">
-            <li><a href="#">Add Bus</a></li>
-            <li><a href="#">List Bus</a></li>
+            <li><a href="/partners/create">Add Partner</a></li>
+            <li><a href="/partners">List Partner</a></li>
          </ul>
         </li>
+        
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-book"></i><span>Booking</span>
+           <i class="fa fa-book"></i><span>Bus</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="#">Add Booking</a></li>
-              <li><a href="#">List Booking</a></li>
+              <li><a href="/buses/create">Add Bus</a></li>
+              <li><a href="/buses">List Bus</a></li>
            </ul>
         </li>
+        
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-shopping-bag"></i><span>Payment</span>
+           <i class="fa fa-shopping-bag"></i><span>Driver</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="#">Add  Payment</a></li>
-              <li><a href="#">List Payment</a></li>
+              <li><a href="/drivers/create">Add  Driver</a></li>
+              <li><a href="/drivers">List Driver</a></li>
            </ul>
         </li>
+        
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-file-text"></i><span>Partner</span>
+           <i class="fa fa-file-text"></i><span>Booking</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="#">Add Partner</a></li>
-              <li><a href="#">List Partner</a></li>
+              <li><a href="/bookings/create">Add Booking</a></li>
+              <li><a href="/bookings">List Booking</a></li>
               
            </ul>
-        </li> --}}
+        </li>
         {{-- <li class="treeview">
            <a href="#">
            <i class="fa fa-bell"></i><span>Attendance</span>

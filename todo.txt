@@ -12,3 +12,4 @@ Add search field
 Export data should work
 Delete of staff should be interactive
 Add search field
+Customers will be added from the client app

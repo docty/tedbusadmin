@@ -5,7 +5,7 @@
      <img src="{{asset('assets/dist/img/mini-logo.png')}}" alt="">
      </span>
      <span class="logo-lg">
-     <img src="{{asset('assets/dist/img/logo.png')}}" alt="">
+     <img src="{{asset('assets/dist/img/tedbus_logo.jpg')}}" alt="">
      </span>
   </a>
   <!-- Header Navbar -->

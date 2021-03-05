@@ -18,7 +18,10 @@ class DatabaseSeeder extends Seeder
         //factory(App\PaymentSchedule::class, 3)->create();
         $this->call(UsersTableSeeder::class);
         $this->call(CustomerSeeder::class);
-        
+        $this->call(PartnerSeeder::class);
+        $this->call(BusSeeder::class);
+        $this->call(DriverSeeder::class);
+        $this->call(BookingSeeder::class);
          
         
        

@@ -7,7 +7,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <p class="centered"><a href="profile.html"><img src="../img/apple-touch-icon.png" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Mos Loans</h5>
+          <h5 class="centered">Tedbus Admin</h5>
           <li class="mt">
             <a  href="/home">
               <i class="fa fa-dashboard"></i>
@@ -15,30 +15,25 @@
               </a>
           </li>
           <li>
-            <a  href="/staff">
+            <a class="active" href="/users">
               <i class="fa fa-user"></i>
-              <span>Staff </span>
+              <span>Users </span>
               {{-- <span class="label label-theme pull-right mail-info">2</span> --}}
               </a>
           </li>
           <li>
-            <a class="active" href="/customer">
+            <a href="/busbooking">
               <i class="fa fa-users"></i>
-              <span>Customer </span>
+              <span>Bus Booking </span>
               </a>
           </li>
           <li>
-            <a href="/loan">
-              <i class="fa fa-book"></i>
-              <span>Loan Book</span>
+            <a href="/payment">
+              <i class="fa fa-users"></i>
+              <span>Payment</span>
               </a>
           </li>
-          <li>
-            <a  href="#">
-              <i class="fa fa-calendar-o"></i>
-              <span>Payment Schedule </span>
-              </a>
-          </li>
+         
 
           
            
@@ -48,19 +43,7 @@
       </div>
     </aside>
 
-<!-- Please Ignore these codes
-    {{-- <li class="sub-menu">
-            <a href="javascript:;">
-              <i class=" fa fa-bar-chart-o"></i>
-              <span>Charts</span>
-              </a>
-            <ul class="sub">
-              <li><a href="morris.html">Morris</a></li>
-              <li><a href="chartjs.html">Chartjs</a></li>
-              <li><a href="flot_chart.html">Flot Charts</a></li>
-              <li><a href="xchart.html">xChart</a></li>
-            </ul>
-          </li> --}}
+
 
 
 
@@ -73,31 +56,27 @@
       <section class="wrapper site-min-height">
 
         <div class="row mt">
-          <div class="showback">
-                <a type="submit" href="{{ route('customer.edit', $customer->urlId) }}" class="btn btn-theme03">Edit Customer</a>
-                <a type="submit" href="{{ route('payment.create') }}" class="btn btn-theme03">Make Payment</a>
-          </div>
+          
           <div class="col-lg-12">
             <div class="row content-panel">
               <div class="col-md-4 profile-text mt mb centered">
                 <div class="right-divider hidden-sm hidden-xs">
-                  <h4>OFFICER</h4>
-                  <p>{{$customer->staff->surname }} {{$customer->staff->otherName}}</p>
-                  <h4>CUSTOMER ID</h4>
-                  <p>{{$customer->customerId}}</p>
+                  
+                  <h4>USER ID</h4>
+                  <p>{{$staff['0']['userId']}}</p>
                    
                 </div>
               </div>
               <!-- /col-md-4 -->
               <div class="col-md-4 profile-text">
-                <h3>{{$customer->surname}} {{$customer->otherName}}</h3>
-                <h6>Santasi / Ashanti Region</h6>
+                <h3>{{$staff['0']['surname']}} {{$staff['0']['firstname']}}</h3>
+                
                  
               </div>
               <!-- /col-md-4 -->
               <div class="col-md-4 centered">
                 <div class="profile-pic">
-                  <p><img src="" class="img-circle" alt="No Image Yet"></p>
+                   
                    
                 </div>
               </div>
@@ -106,34 +85,36 @@
             <!-- /row -->
           </div>
           <!-- /col-lg-12 -->
-            <div class="col-lg-12 mt">
-            <div class="row content-panel">
+           <div class="col-lg-12 mt">
+            <div class="content-panel">
               <div class="panel-heading">
                 <ul class="nav nav-tabs nav-justified">
-                  <li class="active">
-                    <a data-toggle="tab" href="#overview">Payment</a>
-                  </li>
                   <li >
-                    <a data-toggle="tab" href="#customer" class="contact-map">Loans</a>
+                    <a data-toggle="tab" href="#overview">Overview</a>
+                  </li>
+                  <li class="active">
+                    <a data-toggle="tab" href="#customer" class="contact-map">Booking</a>
                   </li>
                    
               </div>
               <!-- /panel-heading -->
               <div class="panel-body">
                 <div class="tab-content">
-                  <div id="overview" class="tab-pane active ">
-                     <div class="row">
-                         
-                       @include('Dashboard.customer.payment_table')
-                         
-                     </div>
-                     
+                  <div id="overview" class="tab-pane ">
+                    @foreach($staff as $worker)
+                     <h5 style="font-weight: bold;">Full Name</h5>
+                     <h5>{{$worker['surname']}} {{$worker['firstname']}}</h5>
+                     <h5 style="font-weight: bold;">Phone Number</h5>
+                     <h5>{{$worker['contact']}}</h5>
+                     <h5 style="font-weight: bold;">Email</h5>
+                     <h5>{{$worker['email']}}</h5>
+                     @endforeach
                   </div>
                   <!-- /tab-pane -->
-                  <div id="customer" class="tab-pane ">
+                  <div id="customer" class="tab-pane active">
                     <div class="row">
                          
-                       @include('Dashboard.customer.loan_table')
+                       @include('Dashboard.users.booking_table')
                          
                      </div>
                     <!-- /row -->

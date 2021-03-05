@@ -22,6 +22,10 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/users', 'StaffController');
 Route::resource('/customers', 'CustomerController');
+Route::resource('/partners', 'PartnerController');
+Route::resource('/buses', 'BusController');
+Route::resource('/drivers', 'DriverController');
+Route::resource('/bookings', 'BookingController');
 Route::post('/payment', 'MinisheetController@payment')->name('payment');
 Route::get('/payment', 'MinisheetController@paymentindex')->name('payment_index');
  

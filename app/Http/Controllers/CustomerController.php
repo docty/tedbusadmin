@@ -115,14 +115,11 @@ class CustomerController extends Controller
         return redirect()->route('customer.show', $customer->urlId);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Customer  $customer
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Customer $customer)
+    
+    public function destroy(Request $request)
     {
-        //
+        $customer = Customer::where('customerId', $request->customerId)->first();
+        $customer->delete();
+        return redirect()->route('customers.index')->with('message','Custome profile successfully deleted.');
     }
 }
