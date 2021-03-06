@@ -16,8 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-// To be released soon
+
  Route::post('/customers', 'CustomerController@save');
- // Route::apiResource('/loanbook', 'LoanBookController');
- // Route::apiResource('/payment_schedule', 'PaymentScheduleController');
- // Route::apiResource('/staff', 'StaffController');
+ Route::post('/bookings', 'BookingController@save');

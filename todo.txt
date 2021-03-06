@@ -13,3 +13,12 @@ Export data should work
 Delete of staff should be interactive
 Add search field
 Customers will be added from the client app
+
+##################### OTHERS  ##########################
+bus registration should contain its destination route and price. user selecting a bus 
+will pick price by default from the backend.
+
+##################### BOOKING  ##########################
+Adding table sorting
+Adding search, date filter,
+Give a message as bus start loading from time.

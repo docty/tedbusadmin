@@ -17,6 +17,8 @@ class CreateBusesTable extends Migration
             $table->bigIncrements('id');
             $table->string('companyName');
             $table->string('numberPlate');
+            $table->integer('capacity');
+            $table->string('schedule')->nullable();
             $table->timestamps();
         });
     }

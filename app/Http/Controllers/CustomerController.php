@@ -41,6 +41,8 @@ class CustomerController extends Controller
         $microtime = microtime();
         $comps = explode(' ', $microtime);
         $content = $request->mobile.''.$request->lastName.$comps[1];
+        $checkData = Customer::where('mobile', $request->mobile)->count();
+        if ($checkData > 0) return redirect()->route('customers.index');
         $customer = new Customer();
         $customer->urlId = md5($content);
         $customer->lastName = $request->lastName;
@@ -57,6 +59,8 @@ class CustomerController extends Controller
         $microtime = microtime();
         $comps = explode(' ', $microtime);
         $content = $request->mobile.''.$request->lastName.$comps[1];
+        $checkData = Customer::where('mobile', $request->mobile)->count();
+        if ($checkData > 0) return response()->json('User Exist');
         $customer = new Customer();
         $customer->urlId = md5($content);
         $customer->lastName = $request->lastName;

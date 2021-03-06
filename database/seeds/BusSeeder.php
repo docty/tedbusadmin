@@ -14,6 +14,8 @@ class BusSeeder extends Seeder
         DB::table('buses')->insert([
             'companyName' => 'VIP',
             'numberPlate' => 'AS-324-2442',
+            'capacity' => 78,
+            'schedule' => 'loading',
             'created_at' => now(),
             'updated_at' => now()
         ]);

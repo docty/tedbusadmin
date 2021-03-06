@@ -5,7 +5,8 @@
            <th>SN</th>
            <th>Company Name</th>
            <th>Number Plate</th>
-           <th>Capacity</th>
+           <th>Filled</th>
+           <th>Available</th>
            <th>Action</th>
         </tr>
      </thead>
@@ -15,7 +16,8 @@
           <td>{{$index+1}}</td>
           <td>{{$item->companyName}}</td>
           <td>{{$item->numberPlate}}</td>
-          <td>{{$item->capacity}}</td>
+          <td>{{$item->filled}}</td>
+          <th>{{$item->capacity - $item->filled}}</td>
           <td>
             <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#customer2"><i class="fa fa-trash-o"></i> </button>
           </td>

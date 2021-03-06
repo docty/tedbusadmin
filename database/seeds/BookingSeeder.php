@@ -15,7 +15,11 @@ class BookingSeeder extends Seeder
             'busName' => 'VIP',
             'source' => 'Kumasi',
             'destination' => 'Accra',
-            'noOfChildren' => 1,
+            'passenger' => 1,
+            'depDate' => '03/06/2021 09:00',
+            'price' => '40.00',
+            'status' => 'pending',
+            'mobile' => '0247049416',
             'created_at' => now(),
             'updated_at' => now()
         ]);

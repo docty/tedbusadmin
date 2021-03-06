@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Bus;
+use App\Booking;
 use Illuminate\Http\Request;
 
 class BusController extends Controller
@@ -24,6 +25,8 @@ class BusController extends Controller
         $bus = new Bus();
         $bus->companyName = $request->companyName;
         $bus->numberPlate = $request->numberPlate;
+        $bus->capacity = $request->capacity;
+        $bus->schedule = 'awaiting';
         $bus->save();
         return redirect()->route('buses.index');
     }
@@ -71,5 +74,24 @@ class BusController extends Controller
     public function destroy(Bus $bus)
     {
         //
+    }
+
+    #####    OTHER USEFUL METHODS #####################
+    public function getLoading(){
+        $model = Bus::where('schedule', 'loading')->get();
+        foreach ($model as $key => $value) {
+           $model[$key]['filled'] = Booking::where('numberPlate', $value->numberPlate)->count();
+        }
+        return  view('Dashboard.buses.loading', ['buses' => $model]);
+    }
+
+    public function getMoving(){
+        $model = Bus::where('schedule', 'moving')->get();
+        return  view('Dashboard.buses.moving', ['buses' => $model]);
+    }
+
+    public function getAwaiting(){
+        $model = Bus::where('schedule', 'awaiting')->get();
+        return  view('Dashboard.buses.awaiting', ['buses' => $model]);
     }
 }

@@ -67,10 +67,10 @@
                                  <form class="form-horizontal">
                                     <fieldset>
                                        <div class="col-md-12 form-group user-form-group">
-                                          <label class="control-label">Are you sure to delete customer</label>
+                                          <label class="control-label">Are you sure to confirm booking</label>
                                           <div class="pull-right">
                                              <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">NO</button>
-                                             <button type="submit" class="btn btn-add btn-sm">YES</button>
+                                             <a href="/booking-confirm" type="button" class="btn btn-add btn-sm">YES</a>
                                           </div>
                                        </div>
                                     </fieldset>

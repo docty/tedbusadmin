@@ -26,6 +26,11 @@ Route::resource('/partners', 'PartnerController');
 Route::resource('/buses', 'BusController');
 Route::resource('/drivers', 'DriverController');
 Route::resource('/bookings', 'BookingController');
+Route::get('/bus-loading', 'BusController@getLoading');
+Route::get('/bus-moving', 'BusController@getMoving');
+Route::get('/bus-awaiting', 'BusController@getAwaiting');
+Route::get('/booking-confirm', 'BookingController@confirmBooking');
+Route::get('/booking-complete', 'BookingController@complete');
 Route::post('/payment', 'MinisheetController@payment')->name('payment');
 Route::get('/payment', 'MinisheetController@paymentindex')->name('payment_index');
  

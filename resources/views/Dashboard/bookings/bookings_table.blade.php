@@ -6,7 +6,9 @@
            <th>Bus</th>
            <th>Source</th>
            <th>Destination</th>
-           <th>Children</th>
+           <th>Passenger</th>
+           <th>Price</th>
+           <th>Date</th>
            <th>Action</th>
         </tr>
      </thead>
@@ -17,9 +19,12 @@
           <td>{{$item->busName}}</td>
           <td>{{$item->source}}</td>
           <td>{{$item->destination}}</td>
-          <td>{{$item->noOfChildren}}</td>
+          <td>{{$item->passenger}}</td>
+          <td>{{$item->price}}</td>
+          <td>{{$item->depDate}}</td>
           <td>
-            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#customer2"><i class="fa fa-trash-o"></i> </button>
+            <a  type="button" class="btn btn-danger btn-sm" href="/booking-confirm?id={{$item->id}}&busName={{$item->busName}}"><i class="fa fa-trash-o"></i></a>
+            {{--  <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#customer2"><i class="fa fa-trash-o"></i> </button>  --}}
           </td>
        </tr>
        @endforeach

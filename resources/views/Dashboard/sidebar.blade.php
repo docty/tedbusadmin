@@ -81,23 +81,24 @@
            </a>
            <ul class="treeview-menu">
               <li><a href="/bookings/create">Add Booking</a></li>
-              <li><a href="/bookings">List Booking</a></li>
-              
+              <li><a href="/bookings">Pending Booking</a></li>
+              <li><a href="/booking-complete">Complete Booking</a></li>
            </ul>
         </li>
-        {{-- <li class="treeview">
+         <li class="treeview">
            <a href="#">
-           <i class="fa fa-bell"></i><span>Attendance</span>
+           <i class="fa fa-bell"></i><span>Scheduling</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="thistory.html">Time History</a></li>
-              <li><a href="timechange.html">Time Change Request</a></li>
-              <li><a href="atreport.html">Attendance Report</a></li>
+              <li><a href="/bus-loading">Loading</a></li>
+              <li><a href="/bus-moving">Moving</a></li>
+              <li><a href="/bus-awaiting">Awaiting</a></li>
            </ul>
         </li>
+        {{--
         <li class="treeview">
            <a href="#">
            <i class="fa fa-edit"></i><span>Recruitment</span>
