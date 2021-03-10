@@ -80,7 +80,6 @@
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="/bookings/create">Add Booking</a></li>
               <li><a href="/bookings">Pending Booking</a></li>
               <li><a href="/booking-complete">Complete Booking</a></li>
            </ul>

@@ -25,10 +25,7 @@
                         <div class="panel-body">
                         
                            <div class="btn-group">
-                              <div class="buttonexport" id="buttonlist"> 
-                                 <a class="btn btn-add" href="/bookings/create"> <i class="fa fa-plus"></i> Add Booking
-                                 </a>  
-                              </div>
+                              
                               <button class="btn btn-exp btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
                               <ul class="dropdown-menu exp-drop" role="menu">
                                  <li>
