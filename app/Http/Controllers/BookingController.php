@@ -36,6 +36,7 @@ class BookingController extends Controller
         $booking->depDate = $request->dep_date;
         $booking->price = $request->price;
         $booking->status = 'pending';
+        $booking->mobile = $request->mobile;
         $booking->save();
         return redirect()->route('bookings.index');
     }
@@ -50,6 +51,7 @@ class BookingController extends Controller
         $booking->depDate = $request->depDate;
         $booking->price = $request->price;
         $booking->status = 'pending';
+        $booking->mobile = $request->mobile;
         $booking->save();
         return response()->json('Saved Successfully');
     }
@@ -102,9 +104,11 @@ class BookingController extends Controller
     public function confirmBooking(Request $request){
         $booking = Booking::find($request->id);
         $bus = Bus::where('schedule', 'loading')->where('companyName', $request->busName)->first();
-        $booking->numberPlate = $bus->numberPlate;
-        $booking->status = 'complete';
-        $booking->save();
+        if ($bus != null ) {
+            $booking->numberPlate = $bus->numberPlate;
+            $booking->status = 'complete';
+            $booking->save();
+        }
         return redirect()->route('bookings.index');
     }
 }

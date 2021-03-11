@@ -37,9 +37,14 @@ class BusController extends Controller
      * @param  \App\Bus  $bus
      * @return \Illuminate\Http\Response
      */
-    public function show(Bus $bus)
+    public function show($bus)
     {
-        //
+        
+        $data = Bus::find($bus);
+        
+        $data->schedule = 'loading';
+        $data->save();
+        return $data;
     }
 
     /**

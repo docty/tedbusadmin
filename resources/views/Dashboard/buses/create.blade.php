@@ -29,12 +29,16 @@
                   <form class="col-sm-6" method="POST" action="{{route('buses.store')}}">
                      @csrf
                      <div class="form-group">
-                        <label>Company Name</label>
-                        <input type="text" class="form-control" placeholder="Enter First Name" name="companyName" required>
+                        <label>Bus Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Bus Name" name="companyName" required>
                      </div>
                      <div class="form-group">
                         <label>Number Plate</label>
                         <input type="text" class="form-control" placeholder="Enter Number Plate" name="numberPlate" required>
+                     </div>
+                     <div class="form-group">
+                        <label>Capacity</label>
+                        <input type="number" class="form-control" placeholder="Enter Capacity" name="capacity" required>
                      </div>
                      <div class="reset-button">
                        
