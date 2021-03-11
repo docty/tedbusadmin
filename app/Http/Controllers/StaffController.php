@@ -10,12 +10,6 @@ use App\Http\Requests\StoreStaff;
 class StaffController extends Controller
 {
 
-    public function constructor()
-    {
-        //$baseUrl = "https://tedbus.herokuapp.com";
-        $localUrl = 'http://127.0.0.1:8100';
-    }
-
     public function index()
     {
         $model = User::all();
@@ -40,7 +34,8 @@ class StaffController extends Controller
         $staff->address = $request->address;
         $staff->staffId = random_int(1000000,9999999);
         $staff->save();
-        return redirect()->route('staff.index');
+        
+        return redirect()->route('users.index');
     }
 
     /*
@@ -61,19 +56,10 @@ class StaffController extends Controller
         
     }
 
-    /* 
-     * Edit the specified staff 
-     */
 
     public function edit($staffId)
     {
-        // $staff = Staff::where('urlId', $staffId)->first();
-        // if ($staff) {
-        //      return view('Dashboard.users.edit' , ['staff' => $staff]);
-         
-        // }else{
-        //     return "Present the 404 page";
-        // }
+        return abort(500);
     }
 
     /*
@@ -104,5 +90,18 @@ class StaffController extends Controller
 
     //    return redirect()->route('users.index');
      
-     }
+    }
+
+    private function sendEmail($email) {
+        $message = 'Congratulation, \n Your account has been created successfullly \n
+                    Use the link below to set your password';
+        $link = 'https://tedbusadmin.com/password-reset?email='.$email;
+    }
+
+    public function passwordUpdate(Request $request) {
+        $staff = User::where('email', $request->email)->first();
+        $staff->password = $request->password;
+        $staff->save();
+        return redirect()->route('login');
+    }
 }

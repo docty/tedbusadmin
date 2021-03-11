@@ -32,6 +32,10 @@
                         <label>Company Name</label>
                         <input type="text" class="form-control" placeholder="Enter First Name" name="companyName" required>
                      </div>
+                     <div class="form-group">
+                        <label>Mobile</label>
+                        <input type="text" class="form-control" placeholder="Enter mobile" name="mobile" required>
+                     </div>
                      <div class="reset-button">
                        
                         <button type="submit" class="btn btn-success">Save</button>

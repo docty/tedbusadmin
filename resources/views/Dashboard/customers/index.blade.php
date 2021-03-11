@@ -18,7 +18,7 @@
                         <div class="panel-heading">
                            <div class="btn-group" id="buttonexport">
                               <a href="javascript:void(0)">
-                                 <h4>Add customer</h4>
+                                 <h4>Customer</h4>
                               </a>
                            </div>
                         </div>

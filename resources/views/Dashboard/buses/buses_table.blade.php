@@ -3,7 +3,7 @@
      <thead>
         <tr class="info">
            <th>SN</th>
-           <th>Company Name</th>
+           <th>Bus Name</th>
            <th>Number Plate</th>
            <th>Capacity</th>
            <th>Action</th>

@@ -12,13 +12,27 @@ Add search field
 Export data should work
 Delete of staff should be interactive
 Add search field
-Customers will be added from the client app
 
 ##################### OTHERS  ##########################
 bus registration should contain its destination route and price. user selecting a bus 
 will pick price by default from the backend.
+Add Contact Form display
 
 ##################### BOOKING  ##########################
 Adding table sorting
 Adding search, date filter,
 Give a message as bus start loading from time.
+Change confirm booking icon at the pending page
+Export data should work.
+
+##################### PARTNERS  ##########################
+Think of how partners will be
+
+##################### DRIVER  ##########################
+Add driver mobile
+
+##################### BUS  ##########################
+Add route and price to each bus
+Add estimated time
+Add features in each bus
+client should get bus info from database
