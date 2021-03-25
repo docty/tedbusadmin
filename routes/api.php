@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
  Route::post('/customers', 'CustomerController@save');
  Route::post('/bookings', 'BookingController@save');
+ Route::post('/token-verify', 'BookingController@tokenVerify');

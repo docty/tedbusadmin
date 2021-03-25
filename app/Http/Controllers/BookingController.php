@@ -111,4 +111,25 @@ class BookingController extends Controller
         }
         return redirect()->route('bookings.index');
     }
+
+    public function tokenVerify(Request $request)
+    {
+        $secretKey = "6LeWRo4aAAAAAArGqa4NGXdLI7_KN6iIwNgSpZMh";
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $captcha = $request->token;
+        $data = array('secret' => $secretKey, 'response' => $captcha);
+        $options = array(
+            'http' => array(
+              'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+              'method'  => 'POST',
+              'content' => http_build_query($data)
+            )
+          );
+        $context  = stream_context_create($options);
+        $response = file_get_contents($url, false, $context);
+        $responseKeys = json_decode($response,true);
+        header('Content-type: application/json');
+          
+        return response()->json(['status' => $responseKeys["success"]]);
+    }
 }
