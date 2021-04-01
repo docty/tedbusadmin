@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Bus;
 use App\Booking;
+use App\Partner;
 use Illuminate\Http\Request;
 
 class BusController extends Controller
@@ -16,7 +17,8 @@ class BusController extends Controller
 
     public function create()
     {
-        return view('Dashboard.buses.create');
+        $partners = Partner::get('companyName');
+        return view('Dashboard.buses.create', ['partners' => $partners]);
     }
 
     
@@ -25,6 +27,7 @@ class BusController extends Controller
         $bus = new Bus();
         $bus->companyName = $request->companyName;
         $bus->numberPlate = $request->numberPlate;
+        $bus->busName = $request->busName;
         $bus->capacity = $request->capacity;
         $bus->schedule = 'awaiting';
         $bus->save();
@@ -92,11 +95,25 @@ class BusController extends Controller
 
     public function getMoving(){
         $model = Bus::where('schedule', 'moving')->get();
+        foreach ($model as $key => $value) {
+            $model[$key]['filled'] = Booking::where('numberPlate', $value->numberPlate)->count();
+        }
         return  view('Dashboard.buses.moving', ['buses' => $model]);
     }
 
     public function getAwaiting(){
         $model = Bus::where('schedule', 'awaiting')->get();
+        foreach ($model as $key => $value) {
+            $model[$key]['filled'] = 0;
+        }
         return  view('Dashboard.buses.awaiting', ['buses' => $model]);
+    }
+
+    public function setBusInAction(Request $request)
+    {
+        $model = Bus::where('id', $request->id)->first();
+        $model->schedule = $request->action;
+        $model->save();
+        return response()->json('Saved Successfully');
     }
 }

@@ -30,11 +30,20 @@
                      @csrf
                      <div class="form-group">
                         <label>Company Name</label>
-                        <input type="text" class="form-control" placeholder="Enter First Name" name="companyName" required>
+                        <select class="form-control" name="companyName" required>
+                           <option value=''></option>
+                           @foreach ($partners as $item)
+                              <option value={{$item->companyName}}>{{$item->companyName}}</option>
+                           @endforeach
+                        </select>
                      </div>
                      <div class="form-group">
                         <label>Driver Name</label>
                         <input type="text" class="form-control" placeholder="Enter Driver Name" name="driverName" required>
+                     </div>
+                     <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" class="form-control" placeholder="Enter Phone Number" name="phoneNumber" required>
                      </div>
                      <div class="reset-button">
                        

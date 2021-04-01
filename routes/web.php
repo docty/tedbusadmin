@@ -29,6 +29,7 @@ Route::resource('/bookings', 'BookingController');
 Route::get('/bus-loading', 'BusController@getLoading');
 Route::get('/bus-moving', 'BusController@getMoving');
 Route::get('/bus-awaiting', 'BusController@getAwaiting');
+Route::get('/set-bus-action', 'BusController@setBusInAction');
 Route::get('/booking-confirm', 'BookingController@confirmBooking');
 Route::get('/booking-complete', 'BookingController@complete');
 Route::post('/payment', 'MinisheetController@payment')->name('payment');

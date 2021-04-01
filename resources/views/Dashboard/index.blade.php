@@ -32,4 +32,5 @@
       <script src="assets/dist/js/dashboard.js" type="text/javascript"></script>
       <!-- End Theme label Script
          =====================================================================-->
+      
 @endsection 

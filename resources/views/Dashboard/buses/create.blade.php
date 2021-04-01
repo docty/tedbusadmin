@@ -29,8 +29,17 @@
                   <form class="col-sm-6" method="POST" action="{{route('buses.store')}}">
                      @csrf
                      <div class="form-group">
+                        <label>Company Name</label>
+                        <select class="form-control" name="companyName" required>
+                           <option value=''></option>
+                           @foreach ($partners as $item)
+                              <option value={{$item->companyName}}>{{$item->companyName}}</option>
+                           @endforeach
+                        </select>
+                     </div>
+                     <div class="form-group">
                         <label>Bus Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Bus Name" name="companyName" required>
+                        <input type="text" class="form-control" placeholder="Enter Bus Name" name="busName" required>
                      </div>
                      <div class="form-group">
                         <label>Number Plate</label>

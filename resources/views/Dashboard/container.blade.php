@@ -33,5 +33,6 @@
         <script src="{{asset('assets/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
         <script src="{{asset('assets/plugins/fastclick/fastclick.min.js')}}"></script>
         <script src="{{asset('assets/dist/js/custom.js')}}"></script>
+        @stack('internalScript');
     </body>
 </html>

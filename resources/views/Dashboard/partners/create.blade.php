@@ -34,7 +34,7 @@
                      </div>
                      <div class="form-group">
                         <label>Mobile</label>
-                        <input type="text" class="form-control" placeholder="Enter mobile" name="mobile" required>
+                        <input type="text" class="form-control" placeholder="Enter mobile" name="phoneNumber" required>
                      </div>
                      <div class="reset-button">
                        

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Driver;
+use App\Partner;
 use Illuminate\Http\Request;
 
 class DriverController extends Controller
@@ -15,16 +16,19 @@ class DriverController extends Controller
 
     public function create()
     {
-        return view('Dashboard.drivers.create');
+        $partners = Partner::get('companyName');
+        return view('Dashboard.drivers.create', ['partners' => $partners]);
     }
 
     
     public function store(Request $request)
     {
-        $bus = new Driver();
-        $bus->companyName = $request->companyName;
-        $bus->driverName = $request->driverName;
-        $bus->save();
+        $driver = new Driver();
+        $driver->companyName = $request->companyName;
+        $driver->driverName = $request->driverName;
+        $driver->phoneNumber = $request->phoneNumber;
+        return $request->all();
+        $driver->save();
         return redirect()->route('drivers.index');
     }
 
