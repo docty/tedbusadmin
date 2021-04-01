@@ -42,7 +42,7 @@
                                  </li>
                               </ul>
                            </div>
-                           @include('Dashboard.bookings.bookings_table')
+                           @include('Dashboard.bookings.bookings_complete_table')
                            
                         </div>
                      </div>

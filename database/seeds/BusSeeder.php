@@ -12,8 +12,9 @@ class BusSeeder extends Seeder
     public function run()
     {
         DB::table('buses')->insert([
-            'companyName' => 'VIP',
+            'companyName' => 'Tedbus',
             'numberPlate' => 'AS-324-2442',
+            'busName' => 'VIP',
             'capacity' => 78,
             'schedule' => 'loading',
             'created_at' => now(),

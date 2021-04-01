@@ -24,6 +24,7 @@ class PartnerController extends Controller
     {
         $partner = new Partner();
         $partner->companyName = $request->companyName;
+        $partner->phoneNumber = $request->phoneNumber;
         $partner->save();
         return redirect()->route('partners.index');
     }

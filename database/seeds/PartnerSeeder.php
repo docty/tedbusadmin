@@ -12,7 +12,8 @@ class PartnerSeeder extends Seeder
     public function run()
     {
         DB::table('partners')->insert([
-            'companyName' => 'VIP',
+            'companyName' => 'Tedbus',
+            'phoneNumber' => '0247049416',
             'created_at' => now(),
             'updated_at' => now()
         ]);

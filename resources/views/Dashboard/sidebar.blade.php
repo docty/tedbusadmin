@@ -22,20 +22,8 @@
            </ul>
         </li>
         <li class="treeview">
-           <a href="#">
-           <i class="fa fa-shopping-cart"></i><span>Customer</span>
-           <span class="pull-right-container">
-           <i class="fa fa-angle-left pull-right"></i>
-           </span>
-           </a>
-           <ul class="treeview-menu">
-            <li><a href="/customers/create">Add Customer</a></li>
-              <li><a href="/customers">List Customer</a></li>
-           </ul>
-        </li>
-        <li class="treeview">
          <a href="#">
-         <i class="fa fa-shopping-basket"></i><span>Partner</span>
+         <i class="fa fa-handshake-o"></i><span>Partner</span>
          <span class="pull-right-container">
          <i class="fa fa-angle-left pull-right"></i>
          </span>
@@ -48,7 +36,20 @@
         
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-book"></i><span>Bus</span>
+           <i class="fa fa-user-circle"></i><span>Customer</span>
+           <span class="pull-right-container">
+           <i class="fa fa-angle-left pull-right"></i>
+           </span>
+           </a>
+           <ul class="treeview-menu">
+            <li><a href="/customers/create">Add Customer</a></li>
+              <li><a href="/customers">List Customer</a></li>
+           </ul>
+        </li>
+       
+        <li class="treeview">
+           <a href="#">
+           <i class="fa fa-bus"></i><span>Bus</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
@@ -61,7 +62,7 @@
         
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-shopping-bag"></i><span>Driver</span>
+           <i class="fa fa-id-badge"></i><span>Driver</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
@@ -86,7 +87,7 @@
         </li>
          <li class="treeview">
            <a href="#">
-           <i class="fa fa-bell"></i><span>Scheduling</span>
+           <i class="fa fa-retweet"></i><span>Scheduling</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>

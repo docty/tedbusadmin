@@ -12,8 +12,9 @@ class DriverSeeder extends Seeder
     public function run()
     {
         DB::table('drivers')->insert([
-            'companyName' => 'VIP',
+            'companyName' => 'Tedbus',
             'driverName' => 'Francis Oppong',
+            'phoneNumber' => '0247049416',
             'created_at' => now(),
             'updated_at' => now()
         ]);

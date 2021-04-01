@@ -9,7 +9,6 @@
            <th>Passenger</th>
            <th>Price</th>
            <th>Date</th>
-           <th>Action</th>
         </tr>
      </thead>
      <tbody>
@@ -22,10 +21,7 @@
           <td>{{$item->passenger}}</td>
           <td>{{$item->price}}</td>
           <td>{{$item->depDate}}</td>
-          <td>
-            <a  type="button" class="btn btn-success btn-sm" href="/booking-confirm?id={{$item->id}}&busName={{$item->busName}}"><i class="fa fa-check"></i></a>
-            {{--  <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#customer2"><i class="fa fa-trash-o"></i> </button>  --}}
-          </td>
+          
        </tr>
        @endforeach
         

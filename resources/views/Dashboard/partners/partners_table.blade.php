@@ -4,6 +4,7 @@
         <tr class="info">
            <th>SN</th>
            <th>Company Name</th>
+           <th>Contact</th>
            <th>Action</th>
         </tr>
      </thead>
@@ -12,6 +13,7 @@
        <tr>
           <td>{{$index+1}}</td>
           <td>{{$item->companyName}}</td>
+          <td>{{$item->phoneNumber}}</td>
           <td>
             <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#customer2"><i class="fa fa-trash-o"></i> </button>
           </td>

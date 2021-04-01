@@ -17,6 +17,7 @@ class CreateDriversTable extends Migration
             $table->bigIncrements('id');
             $table->string('companyName');
             $table->string('driverName');
+            $table->string('phoneNumber');
             $table->timestamps();
         });
     }

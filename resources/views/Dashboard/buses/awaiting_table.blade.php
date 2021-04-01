@@ -4,20 +4,20 @@
         <tr class="info">
            <th>SN</th>
            <th>Company Name</th>
-           <th>Driver Name</th>
-           <th>Phone Number</th>
+           <th>Number Plate</th>
+           <th>Capacity</th>
            <th>Action</th>
         </tr>
      </thead>
      <tbody>
-       @foreach ($drivers as $index=>$item)
+       @foreach ($buses as $index=>$item)
        <tr>
           <td>{{$index+1}}</td>
           <td>{{$item->companyName}}</td>
-          <td>{{$item->driverName}}</td>
-          <td>{{$item['phoneNumber']}}</td>
+          <td>{{$item->numberPlate}}</td>
+          <th>{{$item->capacity}}</td>
           <td>
-            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#customer2"><i class="fa fa-trash-o"></i> </button>
+            <button type="button" class="btn btn-primary btn-sm" onclick="onChangeState({{$item->id}})"><i class="fa fa-arrow-circle-right"></i> </button>
           </td>
        </tr>
        @endforeach
