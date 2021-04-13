@@ -1,10 +1,10 @@
 ##################### GENERAL  ##########################
 Change logo
-Change default profile icon
+Reduce profile icon size to 215 by 215
 
 ##################### STAFF  ##########################
 Export data should work
-Delete of staff should be interactive
+
 Add search field
 
 ##################### CUSTOMER  ##########################

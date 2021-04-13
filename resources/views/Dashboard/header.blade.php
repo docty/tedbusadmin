@@ -263,7 +263,7 @@
            <!-- user -->
            <li class="dropdown dropdown-user">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{asset('assets/dist/img/avatar5.png')}}" class="img-circle" width="45" height="45" alt="user"></a>
+              <img src="{{asset('assets/dist/img/noimage.png')}}" class="img-circle" width="45" height="45" alt="user"></a>
               <ul class="dropdown-menu" >
                  {{-- <li>
                     <a href="profile.html">
