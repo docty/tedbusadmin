@@ -43,15 +43,15 @@ class StaffController extends Controller
      */
     public function show($userId)
     {    
-        $baseUrl = 'http://127.0.0.1:8100';
-        //$baseUrl = "https://tedbus.herokuapp.com";
-
-        $http = new  \GuzzleHttp\Client();
-        $response = $http->get($baseUrl.'/api/users/'.$userId);
-        $result = $response->getBody()->getContents();
-        $model = json_decode($result, true);
+        // $baseUrl = 'http://127.0.0.1:8100';
+        // //$baseUrl = "https://tedbus.herokuapp.com";
+return 444;
+        // $http = new  \GuzzleHttp\Client();
+        // $response = $http->get($baseUrl.'/api/users/'.$userId);
+        // $result = $response->getBody()->getContents();
+        // $model = json_decode($result, true);
         
-        return view('Dashboard.users.profile', ['staff' => $model]);
+        // return view('Dashboard.users.profile', ['staff' => $model]);
        
         
     }
@@ -84,11 +84,9 @@ class StaffController extends Controller
      */
     public function destroy($staff)
     {
-    //     $http = new  \GuzzleHttp\Client();
-
-    //     $response = $http->delete('http://127.0.0.1:8100/api/users?id='.$staff)->send();
-
-    //    return redirect()->route('users.index');
+        $staff =  User::find($staff);
+        $staff->delete();
+        return redirect()->route('users.index');
      
     }
 
