@@ -104,10 +104,14 @@ class BookingController extends Controller
     public function confirmBooking(Request $request){
         $booking = Booking::find($request->id);
         $bus = Bus::where('schedule', 'loading')->where('busName', $request->busName)->first();
+        //return $booking;
         if ($bus != null ) {
             $booking->numberPlate = $bus->numberPlate;
             $booking->status = 'complete';
+            $bus->filled = intval($booking->passenger);
             $booking->save();
+            $bus->save();
+            
         }
         return redirect()->route('bookings.index');
     }

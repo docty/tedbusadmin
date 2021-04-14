@@ -30,6 +30,7 @@ class BusController extends Controller
         $bus->busName = $request->busName;
         $bus->capacity = $request->capacity;
         $bus->schedule = 'awaiting';
+        $bus->filled = 0;
         $bus->save();
         return redirect()->route('buses.index');
     }
@@ -79,17 +80,17 @@ class BusController extends Controller
      * @param  \App\Bus  $bus
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bus $bus)
+    public function destroy( $id)
     {
-        //
+        $bus = Bus::find($id);
+        $bus->delete();
+        return redirect()->route('buses.index');
     }
-
+ 
     #####    OTHER USEFUL METHODS #####################
     public function getLoading(){
         $model = Bus::where('schedule', 'loading')->get();
-        foreach ($model as $key => $value) {
-           $model[$key]['filled'] = Booking::where('numberPlate', $value->numberPlate)->count();
-        }
+         
         return  view('Dashboard.buses.loading', ['buses' => $model]);
     }
 
@@ -113,6 +114,8 @@ class BusController extends Controller
     {
         $model = Bus::where('id', $request->id)->first();
         $model->schedule = $request->action;
+        if ($request->action === 'awaiting')
+            $model->filled = 0;
         $model->save();
         return response()->json('Saved Successfully');
     }

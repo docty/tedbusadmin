@@ -16,6 +16,7 @@ class BusSeeder extends Seeder
             'numberPlate' => 'AS-324-2442',
             'busName' => 'VIP',
             'capacity' => 78,
+            'filled' => 0,
             'schedule' => 'loading',
             'created_at' => now(),
             'updated_at' => now()

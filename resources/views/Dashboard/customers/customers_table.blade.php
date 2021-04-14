@@ -17,7 +17,7 @@
           <td>{{$item->mobile}}</td>
           <td>{{$item->email}}</td>
           <td>
-            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#customer2"><i class="fa fa-trash-o"></i> </button>
+            <button type="button" class="btn btn-danger btn-sm" onclick="onDelete({{$item->id}})" data-toggle="modal" data-target="#customer2"><i class="fa fa-trash-o"></i> </button>
           </td>
        </tr>
        @endforeach

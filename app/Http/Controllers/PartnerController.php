@@ -69,8 +69,10 @@ class PartnerController extends Controller
      * @param  \App\Partner  $partner
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Partner $partner)
+    public function destroy( $partner)
     {
-        //
+        $partner = Partner::find($partner);
+        $partner->delete();
+        return redirect()->route('partners.index');
     }
 }

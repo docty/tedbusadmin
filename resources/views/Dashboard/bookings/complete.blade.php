@@ -18,7 +18,7 @@
                         <div class="panel-heading">
                            <div class="btn-group" id="buttonexport">
                               <a href="javascript:void(0)">
-                                 <h4>Add Booking</h4>
+                                 <h4>Complete Booking</h4>
                               </a>
                            </div>
                         </div>
