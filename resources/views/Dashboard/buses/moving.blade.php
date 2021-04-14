@@ -8,7 +8,7 @@
          </div>
          <div class="header-title">
             <h1>Bus</h1>
-            <small>Bus Awaiting</small>
+            <small>Bus Moving</small>
          </div>
       </section>
       <section class="content">

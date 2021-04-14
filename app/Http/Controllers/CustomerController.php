@@ -120,10 +120,10 @@ class CustomerController extends Controller
     }
 
     
-    public function destroy(Request $request)
+    public function destroy($id)
     {
-        $customer = Customer::where('customerId', $request->customerId)->first();
+        $customer = Customer::find($id);
         $customer->delete();
-        return redirect()->route('customers.index')->with('message','Custome profile successfully deleted.');
+        return redirect()->route('customers.index')->with('message','Customer profile successfully deleted.');
     }
 }

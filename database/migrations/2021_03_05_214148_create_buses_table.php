@@ -19,6 +19,7 @@ class CreateBusesTable extends Migration
             $table->string('busName');
             $table->string('numberPlate');
             $table->integer('capacity');
+            $table->integer('filled')->nullable();
             $table->string('schedule')->nullable();
             $table->timestamps();
         });

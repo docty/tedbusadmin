@@ -4,7 +4,6 @@ Reduce profile icon size to 215 by 215
 
 ##################### STAFF  ##########################
 Export data should work
-
 Add search field
 
 ##################### CUSTOMER  ##########################

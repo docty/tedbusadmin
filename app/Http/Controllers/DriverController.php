@@ -27,7 +27,6 @@ class DriverController extends Controller
         $driver->companyName = $request->companyName;
         $driver->driverName = $request->driverName;
         $driver->phoneNumber = $request->phoneNumber;
-        return $request->all();
         $driver->save();
         return redirect()->route('drivers.index');
     }
@@ -72,8 +71,10 @@ class DriverController extends Controller
      * @param  \App\Driver  $driver
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Driver $driver)
+    public function destroy( $id)
     {
-        //
+        $driver = Driver::find($id);
+        $driver->delete();
+        return redirect()->route('drivers.index');
     }
 }

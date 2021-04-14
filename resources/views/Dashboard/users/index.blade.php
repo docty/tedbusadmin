@@ -84,7 +84,7 @@
                                  '<div class="col-md-12 form-group user-form-group">'+
                                     '<label class="control-label">Are you sure to delete staff</label>'+
                                     '<div class="pull-right">'+
-                                       '<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">NO</button>'+
+                                       '<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" style="margin-right:0.5rem">NO</button>'+
                                        '<button type="submit" class="btn btn-add btn-sm">YES</button>'+
                                     '</div>'+
                                  '</div>'+
