@@ -19,8 +19,10 @@
           <td>{{$item->email}}</td>
           <td>{{$item->address}}</td>
           <td>
+            <a class="btn btn-primary btn-sm" href="{{route('users.show', $item->id)}}"><i class="fa fa-id-badge"></i> </a>
             <button type="button" class="btn btn-danger btn-sm" onclick="onStaffDelete({{$item->id}})" data-toggle="modal" data-target="#customer2"><i class="fa fa-trash-o"></i> </button>
-          </td>
+            
+         </td>
        </tr>
        @endforeach
         

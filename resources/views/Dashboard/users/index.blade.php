@@ -18,7 +18,7 @@
                         <div class="panel-heading">
                            <div class="btn-group" id="buttonexport">
                               <a href="javascript:void(0)">
-                                 <h4>Add staff</h4>
+                                 <h4> Staff List</h4>
                               </a>
                            </div>
                         </div>
@@ -29,7 +29,7 @@
                                  <a class="btn btn-add" href="/users/create"> <i class="fa fa-plus"></i> Add Staff
                                  </a>  
                               </div>
-                              <button class="btn btn-exp btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
+                              {{--  <button class="btn btn-exp btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
                               <ul class="dropdown-menu exp-drop" role="menu">
                                  <li>
                                     <a href="#" onclick="$('#dataTableExample1').tableExport({type:'csv',escape:'false'});"> 
@@ -43,7 +43,7 @@
                                     <a href="#" onclick="$('#dataTableExample1').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> 
                                     <img src="{{asset('assets/dist/img/pdf.png')}}" width="24" alt="logo"> PDF</a>
                                  </li>
-                              </ul>
+                              </ul>  --}}
                            </div>
                            @include('Dashboard.users.users_table')
                            

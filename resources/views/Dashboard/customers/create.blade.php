@@ -10,7 +10,7 @@
       </div>
       <div class="header-title">
          <h1>Add Customer</h1>
-         <small>Customer list</small>
+         <small></small>
       </div>
    </section>
    <!-- Main content -->

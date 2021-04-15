@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Bus;
 use App\Booking;
 use App\Partner;
+use App\Pricing;
 use Illuminate\Http\Request;
 
 class BusController extends Controller
@@ -30,6 +31,7 @@ class BusController extends Controller
         $bus->busName = $request->busName;
         $bus->capacity = $request->capacity;
         $bus->schedule = 'awaiting';
+        $bus->busTag = $request->busTag;
         $bus->filled = 0;
         $bus->save();
         return redirect()->route('buses.index');
@@ -118,5 +120,28 @@ class BusController extends Controller
             $model->filled = 0;
         $model->save();
         return response()->json('Saved Successfully');
+    }
+
+    public function getAllBus()
+    {
+        $bus = Bus::all();
+        $busName = [];
+        foreach ($bus as $key => $value) {
+            $busName[$value->busName] = $value->busName;
+        }
+        $allbus = [];
+        
+        foreach ($busName as $key => $value) {
+            $data = Bus::where('busName', $value)->get(['busName', 'busTag']);
+            foreach ($data as $key => $value) {
+                $price = Pricing::where('busTag', $value->busTag)->first();
+                $data[$key]['price'] = $price['amount'];
+            }
+            $allbus[$key]['tag'] = $data;
+        }
+        return $allbus;
+         
+            
+         
     }
 }
