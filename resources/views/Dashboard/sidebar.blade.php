@@ -98,19 +98,20 @@
               <li><a href="/bus-awaiting">Awaiting</a></li>
            </ul>
         </li>
-        {{--
+        
         <li class="treeview">
            <a href="#">
-           <i class="fa fa-edit"></i><span>Recruitment</span>
+           <i class="fa fa-paw"></i><span>Tools</span>
            <span class="pull-right-container">
            <i class="fa fa-angle-left pull-right"></i>
            </span>
            </a>
            <ul class="treeview-menu">
-              <li><a href="jpost.html">Jobs Posted</a></li>
-              <li><a href="japp.html">Jobs Application</a></li>
+              <li><a href="/route">Route</a></li>
+              <li><a href="/price">Price</a></li>
            </ul>
         </li>
+        {{--
         <li class="treeview">
            <a href="#">
            <i class="fa fa-shopping-basket"></i><span>payroll</span>

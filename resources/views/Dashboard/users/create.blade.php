@@ -10,7 +10,7 @@
       </div>
       <div class="header-title">
          <h1>Add Staff</h1>
-         <small>Staff list</small>
+         <small></small>
       </div>
    </section>
    <!-- Main content -->

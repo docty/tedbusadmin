@@ -10,7 +10,7 @@
       </div>
       <div class="header-title">
          <h1>Add Bus</h1>
-         <small>Bus list</small>
+         <small></small>
       </div>
    </section>
    <!-- Main content -->

@@ -7,8 +7,8 @@
             <i class="fa fa-users"></i>
          </div>
          <div class="header-title">
-            <h1>Bus</h1>
-            <small>Bus List</small>
+            <h1>Route</h1>
+            <small>Route List</small>
          </div>
       </section>
       <section class="content">
@@ -18,15 +18,16 @@
                         <div class="panel-heading">
                            <div class="btn-group" id="buttonexport">
                               <a href="javascript:void(0)">
-                                 <h4>Add Bus</h4>
+                                 <h4> Route List</h4>
                               </a>
+                              <small>All routes are vice versa </small>
                            </div>
                         </div>
                         <div class="panel-body">
                         
                            <div class="btn-group">
                               <div class="buttonexport" id="buttonlist"> 
-                                 <a class="btn btn-add" href="/buses/create"> <i class="fa fa-plus"></i> Add Bus
+                                 <a class="btn btn-add" href="/partners/create"> <i class="fa fa-plus"></i> Add Route
                                  </a>  
                               </div>
                               {{--  <button class="btn btn-exp btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
@@ -45,7 +46,7 @@
                                  </li>
                               </ul>  --}}
                            </div>
-                           @include('Dashboard.buses.buses_table')
+                           @include('Dashboard.tools.route_table')
                            
                         </div>
                      </div>
@@ -73,17 +74,17 @@
                '<div class="modal-content">'+
                   '<div class="modal-header modal-header-primary">'+
                      '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>'+
-                     '<h3><i class="fa fa-user m-r-5"></i> Delete Bus</h3>'+
+                     '<h3><i class="fa fa-user m-r-5"></i> Delete Route</h3>'+
                   '</div>'+
                   '<div class="modal-body">'+
                      '<div class="row">'+
                         '<div class="col-md-12">'+
-                           `<form class="form-horizontal" method="POST" action="/buses/${id}">`+
+                           `<form class="form-horizontal" method="POST" action="/route/${id}">`+
                               `<input type="hidden" name="_token" value="${csrf}">`+
                               '<input type="hidden" name="_method" value="delete">'+
                               '<fieldset>'+
                                  '<div class="col-md-12 form-group user-form-group">'+
-                                    '<label class="control-label">Are you sure to delete bus</label>'+
+                                    '<label class="control-label">Are you sure to delete route</label>'+
                                     '<div class="pull-right">'+
                                        '<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" style="margin-right:0.5rem">NO</button>'+
                                        '<button type="submit" class="btn btn-add btn-sm">YES</button>'+

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class BusSeeder extends Seeder
+class PricingSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,14 +11,12 @@ class BusSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('buses')->insert([
+        DB::table('pricings')->insert([
             'companyName' => 'Tedbus',
-            'numberPlate' => 'AS-324-2442',
-            'busName' => 'VIP',
+            'source' => 'Asafo Market',
+            'destination' => 'Circle',
+            'amount' => '60',
             'busTag' => 'First Class',
-            'capacity' => 78,
-            'filled' => 0,
-            'schedule' => 'loading',
             'created_at' => now(),
             'updated_at' => now()
         ]);
