@@ -1,19 +1,31 @@
 ##################### GENERAL  ##########################
 Change logo
+change Icon at the main tab section header
 Reduce profile icon size to 215 by 215
 
 ##################### STAFF  ##########################
 Add search field
+Work on staff profile
+
+##################### PARTNERS  ##########################
+Add view details
+
 
 ##################### CUSTOMER  ##########################
-Export data should work
-Delete of staff should be interactive
 Add search field
+Work on staff profile
 
-##################### OTHERS  ##########################
-bus registration should contain its destination route and price. user selecting a bus 
-will pick price by default from the backend.
-Add Contact Form display
+##################### DRIVER  ##########################
+
+
+##################### BUS  ##########################
+Work on bus profile
+Add route and price to each bus
+Add estimated time (you can use google map for this)
+Add features in each bus
+client should get bus info from database
+From the client side : {users can select the category of bus they prefer}
+
 
 ##################### BOOKING  ##########################
 Adding table sorting
@@ -23,18 +35,15 @@ Change confirm booking icon at the pending page
 Export data should work.
 Add bus type to the table (this shows the different category in bus)
 
-##################### PARTNERS  ##########################
-
-
-##################### DRIVER  ##########################
-
-
-##################### BUS  ##########################
-Add route and price to each bus
-Add estimated time (you can use google map for this)
-Add features in each bus
-client should get bus info from database
-From the client side : {users can select the category of bus they prefer}
-
 ##################### SCHEDULING  ##########################
 Show notification when bus loading get to a certain threshold
+
+
+##################### OTHERS  ##########################
+bus registration should contain its destination route and price. user selecting a bus 
+will pick price by default from the backend.
+Add Contact Form display
+
+############  NEXT #################
+a=Add route and price creating form
+display bus and price in client app

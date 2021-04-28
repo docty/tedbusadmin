@@ -26,7 +26,7 @@
                         
                            <div class="btn-group">
                               <div class="buttonexport" id="buttonlist"> 
-                                 <a class="btn btn-add" href="/partners/create"> <i class="fa fa-plus"></i> Add Partner
+                                 <a class="btn btn-add" href="/price/create"> <i class="fa fa-plus"></i> Add Price
                                  </a>  
                               </div>
                               {{--  <button class="btn btn-exp btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>

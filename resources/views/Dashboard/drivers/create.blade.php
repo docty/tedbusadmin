@@ -33,7 +33,7 @@
                         <select class="form-control" name="companyName" required>
                            <option value=''></option>
                            @foreach ($partners as $item)
-                              <option value={{$item->companyName}}>{{$item->companyName}}</option>
+                              <option value="{{$item->companyName}}">{{$item->companyName}}</option>
                            @endforeach
                         </select>
                      </div>
