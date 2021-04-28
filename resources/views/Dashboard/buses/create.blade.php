@@ -33,7 +33,7 @@
                         <select class="form-control" name="companyName" required>
                            <option value=''></option>
                            @foreach ($partners as $item)
-                              <option value={{$item->companyName}}>{{$item->companyName}}</option>
+                              <option value="{{$item->companyName}}">{{$item->companyName}}</option>
                            @endforeach
                         </select>
                      </div>
@@ -48,6 +48,10 @@
                      <div class="form-group">
                         <label>Capacity</label>
                         <input type="number" class="form-control" placeholder="Enter Capacity" name="capacity" required>
+                     </div>
+                     <div class="form-group">
+                        <label>Bus Tag</label>
+                        <input type="text" class="form-control" placeholder="First Class" name="busTag" required>
                      </div>
                      <div class="reset-button">
                        

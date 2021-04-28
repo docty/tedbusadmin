@@ -48,6 +48,19 @@
         </li>
        
         <li class="treeview">
+         <a href="#">
+         <i class="fa fa-id-badge"></i><span>Driver</span>
+         <span class="pull-right-container">
+         <i class="fa fa-angle-left pull-right"></i>
+         </span>
+         </a>
+         <ul class="treeview-menu">
+            <li><a href="/drivers/create">Add  Driver</a></li>
+            <li><a href="/drivers">List Driver</a></li>
+         </ul>
+      </li>
+        
+        <li class="treeview">
            <a href="#">
            <i class="fa fa-bus"></i><span>Bus</span>
            <span class="pull-right-container">
@@ -60,18 +73,7 @@
            </ul>
         </li>
         
-        <li class="treeview">
-           <a href="#">
-           <i class="fa fa-id-badge"></i><span>Driver</span>
-           <span class="pull-right-container">
-           <i class="fa fa-angle-left pull-right"></i>
-           </span>
-           </a>
-           <ul class="treeview-menu">
-              <li><a href="/drivers/create">Add  Driver</a></li>
-              <li><a href="/drivers">List Driver</a></li>
-           </ul>
-        </li>
+        
         
         <li class="treeview">
            <a href="#">
