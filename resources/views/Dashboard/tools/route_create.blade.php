@@ -9,7 +9,7 @@
          <i class="fa fa-users"></i>
       </div>
       <div class="header-title">
-         <h1>Add Bus</h1>
+         <h1>Add Route</h1>
          <small></small>
       </div>
    </section>
@@ -21,17 +21,12 @@
             <div class="panel panel-bd lobidrag">
                <div class="panel-heading">
                   <div class="btn-group" id="buttonlist"> 
-                     <a class="btn btn-add " href="/partners"> 
-                     <i class="fa fa-list"></i>  Bus List </a>  
+                     <a class="btn btn-add " href="/route"> 
+                     <i class="fa fa-list"></i>  Route List </a>  
                   </div>
                </div>
                <div class="panel-body">
-                  <div class="col-sm-6">
-                     <form action="upload.php" class="dropzone" id="dropzonewidget">
-                        
-                     </form>
-                  </div>
-                  <form class="col-sm-6" method="POST" action="{{route('buses.store')}}">
+                  <form class="col-sm-6" method="POST" action="{{route('route.store')}}">
                      @csrf
                      <div class="form-group">
                         <label>Company Name</label>
@@ -43,20 +38,20 @@
                         </select>
                      </div>
                      <div class="form-group">
-                        <label>Bus Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Bus Name" name="busName" required>
+                        <label>Source Region</label>
+                        <input type="text" class="form-control" placeholder="Enter Source Region" name="sourceRegion" required>
                      </div>
                      <div class="form-group">
-                        <label>Number Plate</label>
-                        <input type="text" class="form-control" placeholder="Enter Number Plate" name="numberPlate" required>
+                        <label>Source</label>
+                        <input type="text" class="form-control" placeholder="Enter Source" name="source" required>
                      </div>
                      <div class="form-group">
-                        <label>Capacity</label>
-                        <input type="number" class="form-control" placeholder="Enter Capacity" name="capacity" required>
+                        <label>Destination Region</label>
+                        <input type="text" class="form-control" placeholder="Enter Destination Region" name="destinationRegion" required>
                      </div>
                      <div class="form-group">
-                        <label>Bus Tag</label>
-                        <input type="text" class="form-control" placeholder="First Class" name="busTag" required>
+                        <label>Destination </label>
+                        <input type="text" class="form-control" placeholder="Enter Destination" name="destination" required>
                      </div>
                      <div class="reset-button">
                        

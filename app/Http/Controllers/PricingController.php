@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Partner;
 use App\Pricing;
 use Illuminate\Http\Request;
 
@@ -14,25 +14,25 @@ class PricingController extends Controller
         return  view('Dashboard.tools.price', ['price' => $model]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
-        //
+        $partners = Partner::get('companyName');
+        return view('Dashboard.tools.price_create', ['partners' => $partners]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
+        $pricing = new Pricing();
+        $pricing->companyName = $request->companyName;
+        $pricing->source = $request->source;
+        $pricing->destination = $request->destination;
+        $pricing->busTag = $request->busTag;
+        $pricing->amount = $request->amount;
+        $pricing->save();
+        return redirect()->route('price.index');
+        
     }
 
     /**
@@ -69,14 +69,11 @@ class PricingController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Pricing  $pricing
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Pricing $pricing)
+    
+    public function destroy($pricing)
     {
-        //
+        $pricing = Pricing::find($pricing);
+        $pricing->delete();
+        return redirect()->route('price.index');
     }
 }

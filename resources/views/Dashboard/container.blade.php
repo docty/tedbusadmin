@@ -16,6 +16,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset('assets/font-awesome/css/font-awesome.min.css')}}" />
         <link rel="stylesheet" type="text/css" href="{{asset('assets/themify-icons/themify-icons.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/emojionearea/emojionearea.min.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/dist/css/dropzone.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/dist/css/stylecrm.css')}}">
 
     </head>
@@ -32,6 +33,7 @@
         <script src="{{asset('assets/plugins/pace/pace.min.js')}}"></script>
         <script src="{{asset('assets/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
         <script src="{{asset('assets/plugins/fastclick/fastclick.min.js')}}"></script>
+        <script src="{{asset('assets/dist/js/dropzone.min.js')}}"></script>
         <script src="{{asset('assets/dist/js/custom.js')}}"></script>
         @stack('internalScript');
     </body>
