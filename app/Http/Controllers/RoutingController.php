@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Partner;
 use App\Routing;
 use Illuminate\Http\Request;
 
@@ -14,25 +14,25 @@ class RoutingController extends Controller
         return  view('Dashboard.tools.route', ['partners' => $model]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+     
     public function create()
     {
-        //
+        $partners = Partner::get('companyName');
+        return view('Dashboard.tools.route_create', ['partners' => $partners]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
+        $routing = new Routing();
+        $routing->companyName = $request->companyName;
+        $routing->sourceRegion = $request->sourceRegion;
+        $routing->source = $request->source;
+        $routing->destinationRegion = $request->destinationRegion;
+        $routing->destination = $request->destination;
+        $routing->save();
+        return redirect()->route('route.index');
+        
     }
 
     /**
@@ -69,14 +69,10 @@ class RoutingController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Routing  $routing
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Routing $routing)
+    public function destroy($routing)
     {
-        //
+        $routing = Routing::find($routing);
+        $routing->delete();
+        return redirect()->route('route.index');
     }
 }

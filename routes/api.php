@@ -19,4 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
  Route::post('/customers', 'CustomerController@save');
  Route::post('/bookings', 'BookingController@save');
+ Route::get('/all-bus', 'BusController@getAllBus');
  Route::post('/token-verify', 'BookingController@tokenVerify');

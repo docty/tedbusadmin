@@ -16,6 +16,7 @@ class BusSeeder extends Seeder
             'numberPlate' => 'AS-324-2442',
             'busName' => 'VIP',
             'busTag' => 'First Class',
+            'busUrl' => 'http://127.0.0.1:8000/assets/buses/vip-001.jpg',
             'capacity' => 78,
             'filled' => 0,
             'schedule' => 'loading',

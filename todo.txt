@@ -20,10 +20,9 @@ Work on staff profile
 
 ##################### BUS  ##########################
 Work on bus profile
-Add route and price to each bus
+Upload bus url
 Add estimated time (you can use google map for this)
 Add features in each bus
-client should get bus info from database
 From the client side : {users can select the category of bus they prefer}
 
 
@@ -45,5 +44,4 @@ will pick price by default from the backend.
 Add Contact Form display
 
 ############  NEXT #################
-a=Add route and price creating form
-display bus and price in client app
+uploading images

@@ -29,6 +29,7 @@ class BusController extends Controller
         $bus->companyName = $request->companyName;
         $bus->numberPlate = $request->numberPlate;
         $bus->busName = $request->busName;
+        $bus->busUrl = 'http://127.0.0.1:8000/assets/buses/vip-001.jpg';
         $bus->capacity = $request->capacity;
         $bus->schedule = 'awaiting';
         $bus->busTag = $request->busTag;
@@ -122,26 +123,35 @@ class BusController extends Controller
         return response()->json('Saved Successfully');
     }
 
-    public function getAllBus()
+    public function getAllBus(Request $request)
     {
+        $source = $request['source'];
+        $destination = $request['destination'];
+        
         $bus = Bus::all();
+
+        $allbus = [];
         $busName = [];
+
         foreach ($bus as $key => $value) {
             $busName[$value->busName] = $value->busName;
         }
-        $allbus = [];
         
         foreach ($busName as $key => $value) {
-            $data = Bus::where('busName', $value)->get(['busName', 'busTag']);
-            foreach ($data as $key => $value) {
-                $price = Pricing::where('busTag', $value->busTag)->first();
-                $data[$key]['price'] = $price['amount'];
+            $result = [];
+            $bumit = [];
+            $data = Bus::where('busName', $value)->get(['busTag', 'busUrl']);
+            foreach ($data as $key => $item) {
+                $price = Pricing::where('busTag', $item->busTag)->first();
+                $result[$price['amount']] = $item->busUrl;
             }
-            $allbus[$key]['tag'] = $data;
+            foreach ($result as $key => $remind) {
+                $bumit[] = ['price' => $key, 'url' => $remind, 'name' => $value];
+            }
+
+            $allbus[] =   [$value => $bumit];
         }
         return $allbus;
-         
-            
          
     }
 }
