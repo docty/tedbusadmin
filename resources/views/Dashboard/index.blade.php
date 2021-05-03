@@ -18,11 +18,50 @@
                   <div class="statistic-box">
                      <i class="fa fa-user-plus fa-3x"></i>
                      <div class="counter-number pull-right">
-                        <span class="count-number">0</span> 
+                        <span class="count-number">{{$pending}}</span> 
                         <span class="slight"><i class="fa fa-play fa-rotate-270"> </i>
                         </span>
                      </div>
                      <h3> Pending Booking</h3>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+               <div id="cardbox1">
+                  <div class="statistic-box">
+                     <i class="fa fa-user-plus fa-3x"></i>
+                     <div class="counter-number pull-right">
+                        <span class="count-number">{{$loading}}</span> 
+                        <span class="slight"><i class="fa fa-play fa-rotate-270"> </i>
+                        </span>
+                     </div>
+                     <h3> Loading</h3>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+               <div id="cardbox1">
+                  <div class="statistic-box">
+                     <i class="fa fa-user-plus fa-3x"></i>
+                     <div class="counter-number pull-right">
+                        <span class="count-number">{{$moving}}</span> 
+                        <span class="slight"><i class="fa fa-play fa-rotate-270"> </i>
+                        </span>
+                     </div>
+                     <h3> Moving</h3>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+               <div id="cardbox1">
+                  <div class="statistic-box">
+                     <i class="fa fa-user-plus fa-3x"></i>
+                     <div class="counter-number pull-right">
+                        <span class="count-number">{{$awaiting}}</span> 
+                        <span class="slight"><i class="fa fa-play fa-rotate-270"> </i>
+                        </span>
+                     </div>
+                     <h3> Awaiting</h3>
                   </div>
                </div>
             </div>

@@ -22,7 +22,6 @@ class BusController extends Controller
         return view('Dashboard.buses.create', ['partners' => $partners]);
     }
 
-    
     public function store(Request $request)
     {
         $bus = new Bus();
@@ -38,20 +37,16 @@ class BusController extends Controller
         return redirect()->route('buses.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Bus  $bus
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show($bus)
     {
         
         $data = Bus::find($bus);
         
-        $data->schedule = 'loading';
-        $data->save();
-        return $data;
+        //$data->schedule = 'loading';
+        //$data->save();
+        //return $data;
+        return view('Dashboard.buses.profile', ['data' => $data]);
     }
 
     /**

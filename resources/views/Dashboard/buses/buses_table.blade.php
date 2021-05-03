@@ -19,6 +19,7 @@
           <td>{{$item->numberPlate}}</td>
           <td>{{$item->capacity}}</td>
           <td>
+            <a href="{{route('buses.show', $item->id)}}" type="button" class="btn btn-primary btn-sm" onclick="onDelete({{$item->id}})" ><i class="fa fa-check"></i> </a> 
             <button type="button" class="btn btn-danger btn-sm" onclick="onDelete({{$item->id}})" data-toggle="modal" data-target="#customer2"><i class="fa fa-trash-o"></i> </button> 
           </td>
        </tr>

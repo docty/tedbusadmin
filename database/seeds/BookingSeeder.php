@@ -12,6 +12,7 @@ class BookingSeeder extends Seeder
     public function run()
     {
         DB::table('bookings')->insert([
+            'reference' => '814551669',
             'busName' => 'VIP',
             'source' => 'Kumasi',
             'destination' => 'Accra',

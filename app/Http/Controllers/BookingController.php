@@ -102,9 +102,12 @@ class BookingController extends Controller
 
     ########### OTHER METHODS ##################
     public function confirmBooking(Request $request){
+        // Consider the location
+        // Consider the bus type
+        // Consider payment verification
+        // What happens if bus is fulled
         $booking = Booking::find($request->id);
         $bus = Bus::where('schedule', 'loading')->where('busName', $request->busName)->first();
-        //return $booking;
         if ($bus != null ) {
             $booking->numberPlate = $bus->numberPlate;
             $booking->status = 'complete';
@@ -112,6 +115,8 @@ class BookingController extends Controller
             $booking->save();
             $bus->save();
             
+        }else{
+            // Give a command on what to do when bus doesn't exist
         }
         return redirect()->route('bookings.index');
     }
