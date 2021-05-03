@@ -22,6 +22,8 @@ class CreateBookingsTable extends Migration
             $table->string('passenger');
             $table->string('price');
             $table->string('status');
+            $table->string('reference')->nullable();
+            $table->string('transaction')->nullable();
             $table->string('numberPlate')->nullable();
             $table->string('mobile');
             $table->timestamps();

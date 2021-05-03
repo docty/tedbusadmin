@@ -24,7 +24,7 @@
                         </div>
                         <div class="panel-body">
                         
-                           <div class="btn-group">
+                           {{--  <div class="btn-group">
                               
                               <button class="btn btn-exp btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
                               <ul class="dropdown-menu exp-drop" role="menu">
@@ -41,7 +41,7 @@
                                     <img src="{{asset('assets/dist/img/pdf.png')}}" width="24" alt="logo"> PDF</a>
                                  </li>
                               </ul>
-                           </div>
+                           </div>  --}}
                            @include('Dashboard.bookings.bookings_table')
                            
                         </div>

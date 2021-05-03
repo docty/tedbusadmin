@@ -19,12 +19,12 @@ Work on staff profile
 
 
 ##################### BUS  ##########################
-Work on bus profile
 Upload bus url
+Change icon on index page
 Add estimated time (you can use google map for this)
 Add features in each bus
 From the client side : {users can select the category of bus they prefer}
-
+Add routes to each bus
 
 ##################### BOOKING  ##########################
 Adding table sorting
@@ -34,9 +34,11 @@ Change confirm booking icon at the pending page
 Export data should work.
 Add bus type to the table (this shows the different category in bus)
 
+verify user payment
+Consider the bus booking location
 ##################### SCHEDULING  ##########################
 Show notification when bus loading get to a certain threshold
-
+Add passenger view on bus loading
 
 ##################### OTHERS  ##########################
 bus registration should contain its destination route and price. user selecting a bus 
@@ -45,3 +47,14 @@ Add Contact Form display
 
 ############  NEXT #################
 uploading images
+Add bus profile which can show number of trips
+How will users be verified at the bus terminal
+
+
+
+#################### OUTSTANDING TASK ######################
+Verify payment
+User Verification at bus terminal
+User notification or messaging
+Google Maping
+Hosting
